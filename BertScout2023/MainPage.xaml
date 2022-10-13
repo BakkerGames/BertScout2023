@@ -4,7 +4,7 @@
              x:Class="BertScout2023.MainPage">
 
     <ScrollView
-        BackgroundColor="Green"
+        BackgroundColor="White"
         >
         
         <VerticalStackLayout
@@ -20,6 +20,7 @@
                     Padding="20,18,20,0"
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="32"
+                    TextColor="Black"
                     HorizontalOptions="Start" 
                     />
 
@@ -28,9 +29,10 @@
                     WidthRequest="90"
                     HeightRequest="50"
                     HorizontalTextAlignment="End"
+                    TextChanged="TeamNumber_TextChanged"
                     Keyboard="Numeric"
-                    TextColor="White"
                     FontSize="32"
+                    TextColor="Black"
                     Text=""
                     MaxLength="4"
                     />
@@ -42,10 +44,22 @@
                     Margin="20,10,0,0"
                     SemanticProperties.Hint="Start entering team and match data"
                     Clicked="Start_Clicked"
+                    TextColor="White"
+                    BackgroundColor="Green"
                     HorizontalOptions="End"
                     />
 
             </HorizontalStackLayout>
+
+            <Label
+                x:Name="StartLabel"
+                Text=""
+                Padding="20,18,20,0"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                TextColor="Black"
+                HorizontalOptions="Start" 
+                />
 
         </VerticalStackLayout>
 

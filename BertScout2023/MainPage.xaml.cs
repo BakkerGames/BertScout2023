@@ -9,28 +9,24 @@ public partial class MainPage : ContentPage
         InitializeComponent();
     }
 
+
     private void Start_Clicked(object sender, EventArgs e)
     {
-        if (string.IsNullOrEmpty(TeamNumber.Text))
+        if (Start.Text == "Start")
         {
-            StartLabel.Text = "Please enter a team number";
+            if (TeamNumber.Text == "" || MatchNumber.Text == "")
+            {
+                return;
+            }
+            FormBody.IsVisible = true;
+            Start.Text = "Save";
         }
-        else
+        else if (Start.Text == "Save")
         {
-            StartLabel.Text = "Hello Team " + TeamNumber.Text;
-        }
-    }
-
-    private void TeamNumber_TextChanged(object sender, TextChangedEventArgs e)
-    {
-        StringBuilder s = new();
-        foreach (char c in TeamNumber.Text)
-        {
-            if (char.IsNumber(c)) s.Append(c);
-        }
-        if (s.Length != TeamNumber.Text.Length)
-        {
-            TeamNumber.Text = s.ToString();
+            FormBody.IsVisible = false;
+            Start.Text = "Start";
+            TeamNumber.Text = "";
+            MatchNumber.Text = "";
         }
     }
 }

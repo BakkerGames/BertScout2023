@@ -6,60 +6,93 @@
     <ScrollView
         BackgroundColor="White"
         >
-        
+
         <VerticalStackLayout
             VerticalOptions="Start"
             >
 
-            <HorizontalStackLayout 
-                HorizontalOptions="Fill"
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
                 >
-                
+
                 <Label
                     Text="Team:"
-                    Padding="20,18,20,0"
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="32"
-                    TextColor="Black"
-                    HorizontalOptions="Start" 
                     />
 
                 <Entry
                     x:Name="TeamNumber"
-                    WidthRequest="90"
-                    HeightRequest="50"
-                    HorizontalTextAlignment="End"
-                    TextChanged="TeamNumber_TextChanged"
+                    WidthRequest="70"
                     Keyboard="Numeric"
-                    FontSize="32"
-                    TextColor="Black"
-                    Text=""
                     MaxLength="4"
+                    Text=""
                     />
-            
+
+                <Label
+                    Text="Match:"
+                    Margin="30,14,0,0"
+                    />
+
+                <Entry
+                    x:Name="MatchNumber"
+                    WidthRequest="70"
+                    Keyboard="Numeric"
+                    MaxLength="3"
+                    Text=""
+                    />
+
                 <Button
                     x:Name="Start"
                     Text="Start"
-                    FontSize="32"
-                    Margin="20,10,0,0"
-                    SemanticProperties.Hint="Start entering team and match data"
                     Clicked="Start_Clicked"
-                    TextColor="White"
-                    BackgroundColor="Green"
-                    HorizontalOptions="End"
+                    Margin="30,3,0,0"
                     />
 
             </HorizontalStackLayout>
 
-            <Label
-                x:Name="StartLabel"
-                Text=""
-                Padding="20,18,20,0"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                TextColor="Black"
-                HorizontalOptions="Start" 
-                />
+            <VerticalStackLayout
+                x:Name="FormBody"
+                IsVisible="False">
+                
+                <Frame
+                    Margin="0,0,0,0"
+                    BackgroundColor="Green"
+                    HeightRequest="1"
+                    CornerRadius="0"
+                    />
+
+                <Label
+                    Text="Autonomous"
+                    Margin="0,0,0,0"
+                    HorizontalTextAlignment="Center"
+                    />
+
+                <Frame
+                    Margin="0,0,0,0"
+                    BackgroundColor="Green"
+                    HeightRequest="1"
+                    CornerRadius="0"
+                    />
+
+                <Label
+                    Text="Teleoperated"
+                    Margin="0,0,0,0"
+                    HorizontalTextAlignment="Center"
+                    />
+
+                <Frame
+                    Margin="0,0,0,0"
+                    BackgroundColor="Green"
+                    HeightRequest="1"
+                    CornerRadius="0"
+                    />
+
+                <Label
+                    Text="Endgame"
+                    Margin="0,0,0,0"
+                    HorizontalTextAlignment="Center"
+                    />
+
+            </VerticalStackLayout>
 
         </VerticalStackLayout>
 

@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace BertScout2023;
+﻿namespace BertScout2023;
 
 public partial class MainPage : ContentPage
 {
@@ -9,15 +7,14 @@ public partial class MainPage : ContentPage
         InitializeComponent();
     }
 
-
     private void Start_Clicked(object sender, EventArgs e)
     {
         if (Start.Text == "Start")
         {
-            if (TeamNumber.Text == "" || MatchNumber.Text == "")
-            {
+            if (!int.TryParse(TeamNumber.Text, out int teamNumber) || !int.TryParse(MatchNumber.Text, out int matchNumber))
                 return;
-            }
+            if (teamNumber < 1 || matchNumber < 1)
+                return;
             FormBody.IsVisible = true;
             Start.Text = "Save";
         }

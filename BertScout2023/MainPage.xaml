@@ -21,7 +21,7 @@
 
                 <Entry
                     x:Name="TeamNumber"
-                    WidthRequest="70"
+                    WidthRequest="100"
                     Keyboard="Numeric"
                     MaxLength="4"
                     Text=""
@@ -34,7 +34,7 @@
 
                 <Entry
                     x:Name="MatchNumber"
-                    WidthRequest="70"
+                    WidthRequest="80"
                     Keyboard="Numeric"
                     MaxLength="3"
                     Text=""

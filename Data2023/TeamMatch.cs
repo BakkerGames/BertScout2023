@@ -15,10 +15,10 @@ public class TeamMatch
     public bool Deleted { get; set; }
 
     [Indexed]
-    public int TeamNumber { get; set; }
+    public int Team { get; set; }
     [Indexed]
-    public int MatchNumber { get; set; }
-    public string ScouterName { get; set; } = "";
+    public int Match { get; set; }
+    public string Scouter { get; set; } = "";
 
     // autonomous
 

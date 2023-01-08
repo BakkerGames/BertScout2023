@@ -15,9 +15,9 @@ public class TeamMatch
     public bool Deleted { get; set; }
 
     [Indexed]
-    public int Team { get; set; }
+    public int TeamNumber { get; set; }
     [Indexed]
-    public int Match { get; set; }
+    public int MatchNumber { get; set; }
     public string Scouter { get; set; } = "";
 
     // autonomous

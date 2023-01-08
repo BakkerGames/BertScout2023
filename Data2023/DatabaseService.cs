@@ -12,6 +12,11 @@ public class DatabaseService
 
     private static SQLiteAsyncConnection _database;
 
+    public DatabaseService()
+    {
+        _database = new SQLiteAsyncConnection("");
+    }
+
     public DatabaseService(string dbPath)
     {
         _database = new SQLiteAsyncConnection(dbPath, SQLiteOpenFlags.FullMutex);

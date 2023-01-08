@@ -15,6 +15,8 @@ public partial class MainPage : ContentPage
                 return;
             if (teamNumber < 1 || matchNumber < 1)
                 return;
+            TeamNumber.Text = teamNumber.ToString();
+            MatchNumber.Text = matchNumber.ToString();
             FormBody.IsVisible = true;
             TeamNumber.IsEnabled = false;
             MatchNumber.IsEnabled = false;

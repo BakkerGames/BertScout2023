@@ -16,6 +16,11 @@ public partial class MainPage : ContentPage
             if (teamNumber < 1 || matchNumber < 1)
                 return;
             FormBody.IsVisible = true;
+            TeamNumber.IsEnabled = false;
+            MatchNumber.IsEnabled = false;
+            TeamNumber.TextColor = Colors.Gray;
+            MatchNumber.TextColor = Colors.Gray;
+
             Start.Text = "Save";
         }
         else if (Start.Text == "Save")
@@ -24,6 +29,10 @@ public partial class MainPage : ContentPage
             Start.Text = "Start";
             TeamNumber.Text = "";
             MatchNumber.Text = "";
+            TeamNumber.IsEnabled = true;
+            MatchNumber.IsEnabled = true;
+            TeamNumber.TextColor = Colors.Black;
+            MatchNumber.TextColor = Colors.Black;
         }
     }
 }

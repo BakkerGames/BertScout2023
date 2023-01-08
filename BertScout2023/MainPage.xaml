@@ -25,6 +25,7 @@
                     Keyboard="Numeric"
                     MaxLength="4"
                     Text=""
+                    IsEnabled="true"
                     />
 
                 <Label
@@ -38,6 +39,7 @@
                     Keyboard="Numeric"
                     MaxLength="3"
                     Text=""
+                    IsEnabled="true"
                     />
 
                 <Button

@@ -11,30 +11,20 @@ public partial class MainPage : ContentPage
     {
         if (Start.Text == "Start")
         {
-            if (!int.TryParse(TeamNumber.Text, out int teamNumber) || !int.TryParse(MatchNumber.Text, out int matchNumber))
-                return;
-            if (teamNumber < 1 || matchNumber < 1)
-                return;
-            TeamNumber.Text = teamNumber.ToString();
-            MatchNumber.Text = matchNumber.ToString();
-            FormBody.IsVisible = true;
-            TeamNumber.IsEnabled = false;
-            MatchNumber.IsEnabled = false;
-            TeamNumber.TextColor = Colors.Gray;
-            MatchNumber.TextColor = Colors.Gray;
+            if (!ValidateTeamNumber(TeamNumber.Text)) return;
+            if (!ValidateMatchNumber(MatchNumber.Text)) return;
+            
+            
+            TeamNumber.Text = int.Parse (TeamNumber.Text).ToString();
+            MatchNumber.Text = int.Parse (MatchNumber.Text).ToString();
+            EnableTopRow(false);
 
-            Start.Text = "Save";
         }
         else if (Start.Text == "Save")
         {
-            FormBody.IsVisible = false;
-            Start.Text = "Start";
             TeamNumber.Text = "";
             MatchNumber.Text = "";
-            TeamNumber.IsEnabled = true;
-            MatchNumber.IsEnabled = true;
-            TeamNumber.TextColor = Colors.Black;
-            MatchNumber.TextColor = Colors.Black;
+            EnableTopRow(true);
         }
     }
 }

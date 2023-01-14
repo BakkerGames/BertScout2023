@@ -19,6 +19,18 @@
             <Style TargetType="Entry">
                 <Setter Property="TextColor" Value="Black" />
                 <Setter Property="BackgroundColor" Value="#E0E0E0" />
+                <Setter Property="PlaceholderColor" Value="Gray" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="10,5,0,0" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="HeightRequest" Value="48" />
+            </Style>
+
+            <Style TargetType="Editor">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="#E0E0E0" />
+                <Setter Property="PlaceholderColor" Value="Gray" />
                 <Setter Property="FontSize" Value="Large" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="Margin" Value="10,5,0,0" />

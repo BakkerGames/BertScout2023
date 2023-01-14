@@ -6,10 +6,12 @@ public partial class MainPage
     {
         TeamNumber.IsEnabled = enable;
         MatchNumber.IsEnabled = enable;
+        ScoutName.IsEnabled = enable;
         FormBody.IsVisible = !enable;
         Start.Text = enable ? "Start" : "Save";
         TeamNumber.TextColor = enable ? Colors.Black : Colors.Gray;
         MatchNumber.TextColor = enable ? Colors.Black : Colors.Gray;
+        ScoutName.TextColor = enable ? Colors.Black : Colors.Gray;
     }
     public bool ValidateTeamNumber(string teamNumber)
     {
@@ -30,5 +32,19 @@ public partial class MainPage
             return false;
         }
         return true;
+    }
+
+    public bool ValidateScoutName(string scoutName)
+    {
+        if (string.IsNullOrWhiteSpace(scoutName))
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public void ClearAllFields()
+    {
+        Comments.Text = "";
     }
 }

@@ -17,11 +17,12 @@
 
                 <Label
                     Text="Team:"
+                    Margin="0,20,0,0"
                     />
 
                 <Entry
                     x:Name="TeamNumber"
-                    WidthRequest="100"
+                    WidthRequest="70"
                     Keyboard="Numeric"
                     MaxLength="4"
                     Margin="4,10,0,0"
@@ -31,12 +32,12 @@
 
                 <Label
                     Text="Match:"
-                    Margin="30,14,0,0"
+                    Margin="20,20,0,0"
                     />
 
                 <Entry
                     x:Name="MatchNumber"
-                    WidthRequest="80"
+                    WidthRequest="60"
                     Keyboard="Numeric"
                     MaxLength="3"
                     Margin="4,10,0,0"
@@ -46,9 +47,8 @@
 
                 <Entry
                     x:Name="ScoutName"
-                    Placeholder="Scout Name"
-                    PlaceholderColor="LightGreen"
-                    WidthRequest="200"
+                    Placeholder="enter name"
+                    WidthRequest="160"
                     MaxLength="10"
                     Margin="30,10,0,0"
                     Text=""
@@ -59,7 +59,7 @@
                     x:Name="Start"
                     Text="Start"
                     Clicked="Start_Clicked"
-                    Margin="30,10,0,0"
+                    Margin="20,10,0,0"
                     />
 
             </HorizontalStackLayout>
@@ -119,13 +119,25 @@
                     CornerRadius="0"
                     />
 
-                <Entry
-                    x:Name="Comment"
-                    Margin="0,0,0,0"
-                    HorizontalTextAlignment="Start"
-                    Text=""
-                    IsEnabled="true"
+                <VerticalStackLayout
+                    VerticalOptions="Start"
+                    HeightRequest="100"
+                   >
+
+                    <Editor
+                        x:Name="Comments"
+                        Margin="0,0,0,0"
+                        HeightRequest="100"
+                        Placeholder="Comments"
+                        VerticalOptions="Start"
+                        HorizontalOptions="Fill"
+                        HorizontalTextAlignment="Start"
+                        Text=""
+                        IsEnabled="true"
                     />
+
+                </VerticalStackLayout>
+
 
             </VerticalStackLayout>
 

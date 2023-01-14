@@ -13,6 +13,7 @@ public partial class MainPage : ContentPage
         {
             if (!ValidateTeamNumber(TeamNumber.Text)) return;
             if (!ValidateMatchNumber(MatchNumber.Text)) return;
+            if (!ValidateScoutName(ScoutName.Text)) return;
             TeamNumber.Text = int.Parse (TeamNumber.Text).ToString();
             MatchNumber.Text = int.Parse (MatchNumber.Text).ToString();
             EnableTopRow(false);
@@ -21,7 +22,9 @@ public partial class MainPage : ContentPage
         {
             TeamNumber.Text = "";
             MatchNumber.Text = "";
+            ClearAllFields();
             EnableTopRow(true);
+            TeamNumber.Focus();
         }
     }
 }

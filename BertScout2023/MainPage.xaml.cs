@@ -13,12 +13,9 @@ public partial class MainPage : ContentPage
         {
             if (!ValidateTeamNumber(TeamNumber.Text)) return;
             if (!ValidateMatchNumber(MatchNumber.Text)) return;
-            
-            
             TeamNumber.Text = int.Parse (TeamNumber.Text).ToString();
             MatchNumber.Text = int.Parse (MatchNumber.Text).ToString();
             EnableTopRow(false);
-
         }
         else if (Start.Text == "Save")
         {

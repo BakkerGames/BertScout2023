@@ -24,6 +24,7 @@
                     WidthRequest="100"
                     Keyboard="Numeric"
                     MaxLength="4"
+                    Margin="4,10,0,0"
                     Text=""
                     IsEnabled="true"
                     />
@@ -38,6 +39,18 @@
                     WidthRequest="80"
                     Keyboard="Numeric"
                     MaxLength="3"
+                    Margin="4,10,0,0"
+                    Text=""
+                    IsEnabled="true"
+                    />
+
+                <Entry
+                    x:Name="ScoutName"
+                    Placeholder="Scout Name"
+                    PlaceholderColor="LightGreen"
+                    WidthRequest="200"
+                    MaxLength="10"
+                    Margin="30,10,0,0"
                     Text=""
                     IsEnabled="true"
                     />
@@ -46,7 +59,7 @@
                     x:Name="Start"
                     Text="Start"
                     Clicked="Start_Clicked"
-                    Margin="30,3,0,0"
+                    Margin="30,10,0,0"
                     />
 
             </HorizontalStackLayout>
@@ -54,7 +67,7 @@
             <VerticalStackLayout
                 x:Name="FormBody"
                 IsVisible="False">
-                
+
                 <Frame
                     Margin="0,0,0,0"
                     BackgroundColor="Green"
@@ -62,11 +75,16 @@
                     CornerRadius="0"
                     />
 
-                <Label
+                <HorizontalStackLayout
+                    HorizontalOptions="Start">
+
+                    <Label
                     Text="Autonomous"
                     Margin="0,0,0,0"
                     HorizontalTextAlignment="Center"
                     />
+
+                </HorizontalStackLayout>
 
                 <Frame
                     Margin="0,0,0,0"
@@ -92,6 +110,21 @@
                     Text="Endgame"
                     Margin="0,0,0,0"
                     HorizontalTextAlignment="Center"
+                    />
+
+                <Frame
+                    Margin="0,0,0,0"
+                    BackgroundColor="Green"
+                    HeightRequest="1"
+                    CornerRadius="0"
+                    />
+
+                <Entry
+                    x:Name="Comment"
+                    Margin="0,0,0,0"
+                    HorizontalTextAlignment="Start"
+                    Text=""
+                    IsEnabled="true"
                     />
 
             </VerticalStackLayout>

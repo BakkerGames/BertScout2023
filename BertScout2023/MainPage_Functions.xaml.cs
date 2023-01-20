@@ -1,4 +1,6 @@
-﻿namespace BertScout2023;
+﻿using BertScout2023.Models;
+
+namespace BertScout2023;
 
 public partial class MainPage
 {
@@ -6,7 +8,6 @@ public partial class MainPage
     {
         TeamNumber.IsEnabled = enable;
         MatchNumber.IsEnabled = enable;
-        ScoutName.IsEnabled = enable;
         FormBody.IsVisible = !enable;
         Start.Text = enable ? "Start" : "Save";
         TeamNumber.TextColor = enable ? Colors.Black : Colors.Gray;
@@ -52,5 +53,19 @@ public partial class MainPage
     public void ClearAllFields()
     {
         Comments.Text = "";
+    }
+
+    private void FillFields(TeamMatch item)
+    {
+        ScoutName.Text = item.ScoutName;
+        // todo fill all other fields
+        Comments.Text = item.Comments;
+    }
+
+    private void StoreFields(TeamMatch item)
+    {
+        item.ScoutName = ScoutName.Text;
+        // todo store all other fields
+        item.Comments = Comments.Text;
     }
 }

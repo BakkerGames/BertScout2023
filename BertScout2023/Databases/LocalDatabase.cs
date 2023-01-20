@@ -41,6 +41,14 @@ public class LocalDatabase
             .ToListAsync();
     }
 
+    public async Task<List<TeamMatch>> GetChangedItemsAsync()
+    {
+        await Init();
+        return await Database.Table<TeamMatch>()
+            .Where(x => x.Changed)
+            .ToListAsync();
+    }
+
     public async Task<List<TeamMatch>> GetTeamAllMatches(int team)
     {
         await Init();
@@ -71,6 +79,14 @@ public class LocalDatabase
         await Init();
         if (item.Id != 0)
         {
+            return await Database.UpdateAsync(item);
+        }
+        var oldItem = await GetTeamMatchAsync(item.TeamNumber, item.MatchNumber);
+        if (oldItem != null)
+        {
+            item.Id = oldItem.Id;
+            item.Uuid = oldItem.Uuid;
+            item.AirtableId = oldItem.AirtableId;
             return await Database.UpdateAsync(item);
         }
         item.Uuid = Guid.NewGuid().ToString();

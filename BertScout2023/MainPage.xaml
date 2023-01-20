@@ -132,6 +132,7 @@
                         VerticalOptions="Start"
                         HorizontalOptions="Fill"
                         HorizontalTextAlignment="Start"
+                        MaxLength="135"
                         Text=""
                         IsEnabled="true"
                     />

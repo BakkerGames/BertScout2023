@@ -13,15 +13,21 @@ public partial class MainPage
         MatchNumber.TextColor = enable ? Colors.Black : Colors.Gray;
         ScoutName.TextColor = enable ? Colors.Black : Colors.Gray;
     }
-    public bool ValidateTeamNumber(string teamNumber)
+
+    public static bool ValidateTeamNumber(string teamNumber)
     {
-        if (!int.TryParse(teamNumber, out int tNumber)) { return false; 
+        if (!int.TryParse(teamNumber, out int tNumber))
+        {
+            return false;
         }
-        if (tNumber < 1) { return false; 
+        if (tNumber < 1)
+        {
+            return false;
         }
         return true;
     }
-    public bool ValidateMatchNumber(string matchNumber)
+
+    public static bool ValidateMatchNumber(string matchNumber)
     {
         if (!int.TryParse(matchNumber, out int mNumber))
         {
@@ -34,7 +40,7 @@ public partial class MainPage
         return true;
     }
 
-    public bool ValidateScoutName(string scoutName)
+    public static bool ValidateScoutName(string scoutName)
     {
         if (string.IsNullOrWhiteSpace(scoutName))
         {

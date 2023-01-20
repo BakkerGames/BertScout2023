@@ -11,11 +11,11 @@ public partial class MainPage : ContentPage
     {
         if (Start.Text == "Start")
         {
-            if (!ValidateTeamNumber(TeamNumber.Text)) return;
-            if (!ValidateMatchNumber(MatchNumber.Text)) return;
-            if (!ValidateScoutName(ScoutName.Text)) return;
-            TeamNumber.Text = int.Parse (TeamNumber.Text).ToString();
-            MatchNumber.Text = int.Parse (MatchNumber.Text).ToString();
+            if (!MainPage.ValidateTeamNumber(TeamNumber.Text)) return;
+            if (!MainPage.ValidateMatchNumber(MatchNumber.Text)) return;
+            if (!MainPage.ValidateScoutName(ScoutName.Text)) return;
+            TeamNumber.Text = int.Parse(TeamNumber.Text).ToString();
+            MatchNumber.Text = int.Parse(MatchNumber.Text).ToString();
             EnableTopRow(false);
         }
         else if (Start.Text == "Save")

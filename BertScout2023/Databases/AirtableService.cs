@@ -1,11 +1,14 @@
 ﻿using AirtableApiClient;
-using Data2023;
+using BertScout2023.Models;
 using System.Reflection;
 
-namespace Airtable2023;
+namespace BertScout2023.Databases;
 
 public class AirtableService
 {
+    private const string AIRTABLE_BASE = "apppW4EmzeMC26IEO";
+    private const string AIRTABLE_KEY = "keyIlZIGEOtUMLKSY";
+
     public static async Task<int> AirtableSendRecords(List<TeamMatch> matches)
     {
         int NewCount = 0;
@@ -16,7 +19,7 @@ public class AirtableService
         Type myType = typeof(TeamMatch);
         myFieldInfo = myType.GetFields(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
 
-        using AirtableBase airtableBase = new(Constants.AIRTABLE_KEY, Constants.AIRTABLE_BASE);
+        using AirtableBase airtableBase = new(AIRTABLE_KEY, AIRTABLE_BASE);
 
         foreach (TeamMatch match in matches)
         {

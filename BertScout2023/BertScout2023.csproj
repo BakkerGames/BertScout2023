@@ -66,7 +66,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiIcon Include="Resources\AppIcon\bert_logo_128.ico" />
+	  <MauiIcon Include="Resources\AppIcon\bert_logo_64.ico" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -83,10 +83,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Update="Resources\AppIcon\bert_logo_128.png">
+	  <None Update="Resources\AppIcon\bert_logo_64.png">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
+		<None Update="Resources\AppIcon\bert_logo_128.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 	</ItemGroup>
 
 </Project>

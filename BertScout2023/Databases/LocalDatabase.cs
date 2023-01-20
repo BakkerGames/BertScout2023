@@ -15,9 +15,6 @@ public class LocalDatabase
         // enable multi-threaded database access
         SQLiteOpenFlags.SharedCache;
 
-    private static string DatabasePath =>
-        Path.Combine(FileSystem.AppDataDirectory, DatabaseFilename);
-
     private SQLiteAsyncConnection Database;
 
     public LocalDatabase()
@@ -30,8 +27,17 @@ public class LocalDatabase
         {
             return;
         }
-        Database = new(DatabasePath, Flags);
-        await Database.CreateTableAsync<TeamMatch>();
+        var basePath = FileSystem.AppDataDirectory;
+        var databasePath = Path.Combine(basePath, DatabaseFilename);
+        try
+        {
+            Database = new(databasePath, Flags);
+            await Database.CreateTableAsync<TeamMatch>();
+        }
+        catch (Exception ex)
+        {
+            throw new SystemException($"Error initializing database: {databasePath}\r\n{ex.Message}");
+        }
     }
 
     public async Task<List<TeamMatch>> GetItemsAsync()

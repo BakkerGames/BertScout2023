@@ -12,7 +12,6 @@ public partial class MainPage
         Start.Text = enable ? "Start" : "Save";
         TeamNumber.TextColor = enable ? Colors.Black : Colors.Gray;
         MatchNumber.TextColor = enable ? Colors.Black : Colors.Gray;
-        ScoutName.TextColor = enable ? Colors.Black : Colors.Gray;
     }
 
     public static bool ValidateTeamNumber(string teamNumber)

@@ -3,13 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:DataType="ContentPage"
              x:Class="BertScout2023.AirtablePage"
-             Title="AirtablePage">
+             Title="Airtable"
+             x:Name="cp">
+    
     <VerticalStackLayout
         BackgroundColor="White"
+        VerticalOptions="Fill"
+        SizeChanged="VerticalStackLayout_SizeChanged"
         >
+        
         <Label 
-            Text="Send data to Airtable!"
+            x:Name="AirtableLabel"
+            Text="Send data to Airtable!" 
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        
+        <Button 
+            x:Name="AirtableSend"
+            Text="Send"
+            HorizontalOptions="Center"
+            Clicked="AirtableSend_Clicked"
+            />
+
+        <ScrollView
+            x:Name="ScrollResults"
+            VerticalScrollBarVisibility="Always"
+            BackgroundColor="White">
+
+            <Label
+                x:Name="AirtableResults" 
+                Text="" 
+                VerticalOptions="FillAndExpand"
+                />
+
+        </ScrollView>
+       
     </VerticalStackLayout>
+
 </ContentPage>

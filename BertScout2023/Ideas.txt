@@ -1,0 +1,19 @@
+﻿pro - good defense
+pro - fast
+pro - good scorer
+pro - cool auto
+pro - can pick up cones
+pro - can pick up sideways cones
+pro - can do high scoring
+
+con - broke down
+con - slow
+con - never moved
+con - doesn't have an auto
+con - bad defense
+con - cubes only
+con - no high scoring
+con - bottoms out on ramp
+con - tippy
+con - overly aggressive
+con - no pick up

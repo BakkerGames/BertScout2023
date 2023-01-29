@@ -1,10 +1,11 @@
 ﻿pro - good defense
 pro - fast
-pro - good scorer
+pro - efficient
 pro - cool auto
 pro - can pick up cones
 pro - can pick up sideways cones
 pro - can do high scoring
+pro - can pick up from human player station
 
 con - broke down
 con - slow
@@ -17,3 +18,5 @@ con - bottoms out on ramp
 con - tippy
 con - overly aggressive
 con - no pick up
+con - yellow card
+con - red card

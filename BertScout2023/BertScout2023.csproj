@@ -50,7 +50,6 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\bert_logo_64.ico" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#FFFFFF" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\bert_logo.png" Color="#FFFFFF" BaseSize="316,366" />
@@ -66,7 +65,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiIcon Include="Resources\AppIcon\bert_logo_64.ico" />
+	  <None Remove="Resources\AppIcon\bert_logo_128.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Resources\AppIcon\bert_logo_128.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </EmbeddedResource>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -83,14 +89,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Update="Resources\AppIcon\bert_logo_64.ico" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#FFFFFF" />
 	  <None Update="Resources\AppIcon\bert_logo_64.png">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
-		<None Update="Resources\AppIcon\bert_logo_128.png">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
 	</ItemGroup>
 
 </Project>

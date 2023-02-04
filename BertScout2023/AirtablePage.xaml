@@ -6,10 +6,10 @@
     x:Name="cp"
     x:Class="BertScout2023.AirtablePage"
     Title="Airtable"
+    BackgroundColor="White"
     >
     
     <VerticalStackLayout
-        BackgroundColor="White"
         VerticalOptions="Fill"
         SizeChanged="VerticalStackLayout_SizeChanged"
         >

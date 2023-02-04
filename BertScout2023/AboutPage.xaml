@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="BertScout2023.AboutPage"
+    x:DataType="ContentPage"
+    x:Name="cpAbout"
+    Title="About"
+    BackgroundColor="White"
+    >
+    
+    <VerticalStackLayout
+        VerticalOptions="Fill">
+        
+        <Label
+            x:Name="LabelAboutVersion"
+            Text="Version: 2023.2.4.0"
+            HorizontalOptions="Center"
+            />
+
+        <Label
+            x:Name="LabelAboutDatabase"
+            Text="DatabasePath"
+            HorizontalOptions="Center"
+            />
+
+    </VerticalStackLayout>
+
+</ContentPage>

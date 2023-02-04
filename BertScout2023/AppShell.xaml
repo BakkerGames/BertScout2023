@@ -13,12 +13,21 @@
         Title="BERT Scouting App 2023"
         FlexLayout.AlignSelf="Center"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="MainPage"
+        />
 
     <ShellContent
         Title="Airtable"
         FlexLayout.AlignSelf="Center"
         ContentTemplate="{DataTemplate local:AirtablePage}"
-        Route="AirtablePage" />
+        Route="AirtablePage"
+        />
+
+    <ShellContent
+        Title="About"
+        FlexLayout.AlignSelf="Center"
+        ContentTemplate="{DataTemplate local:AboutPage}"
+        Route="AboutPage"
+        />
 
 </Shell>

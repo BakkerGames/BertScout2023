@@ -5,11 +5,10 @@
     x:DataType="ContentPage"
     x:Name="cp"
     x:Class="BertScout2023.MainPage"
+    BackgroundColor="White"
     >
 
-    <ScrollView
-        BackgroundColor="White"
-        >
+    <ScrollView>
 
         <VerticalStackLayout
             VerticalOptions="Start"
@@ -51,7 +50,7 @@
 
                 <Entry
                     x:Name="ScoutName"
-                    Placeholder="enter name"
+                    Placeholder="name"
                     WidthRequest="160"
                     MaxLength="10"
                     Margin="30,10,0,0"

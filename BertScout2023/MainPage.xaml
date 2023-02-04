@@ -398,16 +398,16 @@
 
                 <VerticalStackLayout
                     VerticalOptions="Start"
-                    HeightRequest="170"
                     >
 
-                    <HorizontalStackLayout>
+                    <HorizontalStackLayout
+                        >
 
                         <Label
                             Text="Click to select comments:"
                             Margin="10,6,0,0"
                             />
-                        
+
                         <Picker
                             x:Name="CommentPicker"
                             SelectedIndexChanged="CommentPicker_SelectedIndexChanged"
@@ -420,17 +420,15 @@
                             />
 
                     </HorizontalStackLayout>
-                    
+
                     <Editor
                         x:Name="Comments"
-                        Margin="0,0,0,0"
-                        VerticalOptions="StartAndExpand"
-                        HorizontalOptions="Fill"
+                        HorizontalOptions="FillAndExpand"
                         HorizontalTextAlignment="Start"
-                        MaxLength="200"
+                        HeightRequest="200"
                         Text=""
-                        IsEnabled="true"
-                    />
+                        MaxLength="200"
+                        />
 
                 </VerticalStackLayout>
 

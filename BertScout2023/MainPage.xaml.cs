@@ -12,8 +12,11 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        CommentPicker.Items.Add("Good robot.");
-        CommentPicker.Items.Add("Robot broke.");
+        CommentPicker.Items.Clear();
+        foreach (string s in CommentList)
+        {
+            CommentPicker.Items.Add(s);
+        }
     }
 
     private async void Start_Clicked(object sender, EventArgs e)

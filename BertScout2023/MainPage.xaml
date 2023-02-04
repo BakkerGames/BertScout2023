@@ -72,55 +72,328 @@
                 x:Name="FormBody"
                 IsVisible="False">
 
-                <Frame
-                    Margin="0,0,0,0"
-                    BackgroundColor="Green"
-                    HeightRequest="1"
-                    CornerRadius="0"
-                    />
-
-                <HorizontalStackLayout
-                    HorizontalOptions="Start">
-
-                    <Label
+                <Label
                     Text="Autonomous"
-                    Margin="0,0,0,0"
+                    Margin="0,10,0,10"
+                    BackgroundColor="Green"
                     HorizontalTextAlignment="Center"
                     />
+
+                <HorizontalStackLayout>
+
+                    <VerticalStackLayout>
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start">
+
+                            <Label
+                                Text="Cube Top:"
+                                WidthRequest="150"
+                                />
+
+                            <Label
+                                Text="0"
+                                HorizontalTextAlignment="End"
+                                WidthRequest="30"
+                                />
+
+                            <Button
+                                Text=" + "
+                                />
+
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start">
+
+                            <Label
+                                Text="Cube Mid:"
+                                WidthRequest="150"
+                                />
+
+                            <Label
+                                Text="0"
+                                HorizontalTextAlignment="End"
+                                WidthRequest="30"
+                                />
+
+                            <Button
+                                Text=" + "
+                                />
+
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start">
+
+                            <Label
+                                Text="Cube Low:"
+                                WidthRequest="150"
+                                />
+
+                            <Label
+                                Text="0"
+                                HorizontalTextAlignment="End"
+                                WidthRequest="30"
+                                />
+
+                            <Button
+                                Text=" + "
+                                />
+
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start">
+
+                            <Label
+                                Text="Cone Top:"
+                                WidthRequest="150"
+                                />
+
+                            <Label
+                                Text="0"
+                                HorizontalTextAlignment="End"
+                                WidthRequest="30"
+                                />
+
+                            <Button
+                                Text=" + "
+                                />
+
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start">
+
+                            <Label
+                                Text="Cone Mid:"
+                                WidthRequest="150"
+                                />
+
+                            <Label
+                                Text="0"
+                                HorizontalTextAlignment="End"
+                                WidthRequest="30"
+                                />
+
+                            <Button
+                                Text=" + "
+                                />
+
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start">
+
+                            <Label
+                                Text="Cone Low:"
+                                WidthRequest="150"
+                                />
+
+                            <Label
+                                Text="0"
+                                HorizontalTextAlignment="End"
+                                WidthRequest="30"
+                                />
+
+                            <Button
+                                Text=" + "
+                                />
+
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout
+                        Margin="10,0,0,0"
+                        >
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start">
+
+                            <Button
+                                Margin="10,6,0,3"
+                                WidthRequest="120"
+                                Text="Mobility"
+                                />
+
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start">
+
+                            <Button
+                                Margin="10,6,0,3"
+                                WidthRequest="120"
+                                Text="Docked"
+                                />
+
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start">
+
+                            <Button
+                                Margin="10,6,0,0"
+                                WidthRequest="120"
+                                Text="Engaged"
+                                />
+
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
 
                 </HorizontalStackLayout>
 
-                <Frame
-                    Margin="0,0,0,0"
-                    BackgroundColor="Green"
-                    HeightRequest="1"
-                    CornerRadius="0"
-                    />
-
                 <Label
                     Text="Teleoperated"
-                    Margin="0,0,0,0"
+                    Margin="0,10,0,10"
+                    BackgroundColor="Green"
                     HorizontalTextAlignment="Center"
                     />
 
-                <Frame
-                    Margin="0,0,0,0"
-                    BackgroundColor="Green"
-                    HeightRequest="1"
-                    CornerRadius="0"
-                    />
+                <HorizontalStackLayout>
+
+                    <VerticalStackLayout>
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start">
+
+                            <Label
+                                Text="Cube Top:"
+                                WidthRequest="150"
+                                />
+
+                            <Label
+                                Text="0"
+                                HorizontalTextAlignment="End"
+                                WidthRequest="30"
+                                />
+
+                            <Button
+                                Text=" + "
+                                />
+
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start">
+
+                            <Label
+                                Text="Cube Mid:"
+                                WidthRequest="150"
+                                />
+
+                            <Label
+                                Text="0"
+                                HorizontalTextAlignment="End"
+                                WidthRequest="30"
+                                />
+
+                            <Button
+                                Text=" + "
+                                />
+
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start">
+
+                            <Label
+                                Text="Cube Low:"
+                                WidthRequest="150"
+                                />
+
+                            <Label
+                                Text="0"
+                                HorizontalTextAlignment="End"
+                                WidthRequest="30"
+                                />
+
+                            <Button
+                                Text=" + "
+                                />
+
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start">
+
+                            <Label
+                                Text="Cone Top:"
+                                WidthRequest="150"
+                                />
+
+                            <Label
+                                Text="0"
+                                HorizontalTextAlignment="End"
+                                WidthRequest="30"
+                                />
+
+                            <Button
+                                Text=" + "
+                                />
+
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start">
+
+                            <Label
+                                Text="Cone Mid:"
+                                WidthRequest="150"
+                                />
+
+                            <Label
+                                Text="0"
+                                HorizontalTextAlignment="End"
+                                WidthRequest="30"
+                                />
+
+                            <Button
+                                Text=" + "
+                                />
+
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start">
+
+                            <Label
+                                Text="Cone Low:"
+                                WidthRequest="150"
+                                />
+
+                            <Label
+                                Text="0"
+                                HorizontalTextAlignment="End"
+                                WidthRequest="30"
+                                />
+
+                            <Button
+                                Text=" + "
+                                />
+
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+
+                </HorizontalStackLayout>
 
                 <Label
                     Text="Endgame"
-                    Margin="0,0,0,0"
-                    HorizontalTextAlignment="Center"
-                    />
-
-                <Frame
-                    Margin="0,0,0,0"
+                    Margin="0,10,0,10"
                     BackgroundColor="Green"
-                    HeightRequest="1"
-                    CornerRadius="0"
+                    HorizontalTextAlignment="Center"
                     />
 
                 <VerticalStackLayout

@@ -25,10 +25,11 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<Company>BertRobotics</Company>
-		<AssemblyVersion>2023.1.19.0</AssemblyVersion>
-		<FileVersion>2023.1.19.0</FileVersion>
+		<AssemblyVersion>2023.2.4.0</AssemblyVersion>
+		<FileVersion>2023.2.4.0</FileVersion>
 		<ApplicationIcon>Resources\AppIcon\bert_logo_64.ico</ApplicationIcon>
 		<PackageIcon>bert_logo_128.png</PackageIcon>
+		<DefaultLanguage>en</DefaultLanguage>
 
 	</PropertyGroup>
 

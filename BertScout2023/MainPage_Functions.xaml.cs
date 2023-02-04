@@ -59,6 +59,7 @@ public partial class MainPage
         ScoutName.Text = item.ScoutName;
         // todo fill all other fields
         Comments.Text = item.Comments;
+        CommentPicker.SelectedIndex = -1;
     }
 
     private void StoreFields(TeamMatch item)

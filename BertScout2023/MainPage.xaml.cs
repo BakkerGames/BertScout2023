@@ -12,6 +12,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
+        CommentPicker.Items.Add("Good robot.");
+        CommentPicker.Items.Add("Robot broke.");
     }
 
     private async void Start_Clicked(object sender, EventArgs e)
@@ -58,5 +60,17 @@ public partial class MainPage : ContentPage
             EnableTopRow(true);
             TeamNumber.Focus();
         }
+    }
+
+    private void CommentPicker_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (CommentPicker.SelectedIndex < 0)
+            return;
+        if (Comments.Text == null)
+            Comments.Text = "";
+        else if (Comments.Text.Length > 0)
+            Comments.Text += " ";
+        Comments.Text += CommentPicker.SelectedItem.ToString();
+        CommentPicker.SelectedIndex = -1;
     }
 }

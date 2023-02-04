@@ -5,6 +5,8 @@ namespace BertScout2023.Databases;
 
 public class LocalDatabase
 {
+    public string DatabaseDirPath { get; set; } = "";
+
     private const string DatabaseFilename = "bertscout2023.db3";
 
     private const SQLiteOpenFlags Flags =
@@ -19,6 +21,7 @@ public class LocalDatabase
 
     public LocalDatabase()
     {
+        DatabaseDirPath = FileSystem.AppDataDirectory;
     }
 
     private async Task Init()
@@ -27,8 +30,7 @@ public class LocalDatabase
         {
             return;
         }
-        var basePath = FileSystem.AppDataDirectory;
-        var databasePath = Path.Combine(basePath, DatabaseFilename);
+        var databasePath = Path.Combine(DatabaseDirPath, DatabaseFilename);
         try
         {
             Database = new(databasePath, Flags);

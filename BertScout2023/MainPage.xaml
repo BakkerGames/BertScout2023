@@ -401,6 +401,29 @@
                     >
 
                     <HorizontalStackLayout
+                        HorizontalOptions="Center"
+                        >
+
+                        <Button
+                                WidthRequest="120"
+                                Text="Parked"
+                                />
+
+                        <Button
+                                WidthRequest="120"
+                                Text="Docked"
+                                />
+
+                        <Button
+                                WidthRequest="120"
+                                Text="Engaged"
+                                />
+
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout
+                        Margin="0,5,0,0"
+                        HorizontalOptions="Center"
                         >
 
                         <Label
@@ -425,9 +448,8 @@
                         x:Name="Comments"
                         HorizontalOptions="FillAndExpand"
                         HorizontalTextAlignment="Start"
-                        HeightRequest="200"
+                        HeightRequest="150"
                         Text=""
-                        MaxLength="200"
                         />
 
                 </VerticalStackLayout>

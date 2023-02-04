@@ -56,16 +56,32 @@ public partial class MainPage
 
     private void FillFields(TeamMatch item)
     {
-        ScoutName.Text = item.ScoutName;
-        // todo fill all other fields
+        LabelAutoCubeTop.Text = item.Auto_Cubes_Top.ToString();
+        LabelAutoCubeMid.Text = item.Auto_Cubes_Middle.ToString();
+        LabelAutoCubeLow.Text = item.Auto_Cubes_Bottom.ToString();
+        LabelAutoConeTop.Text = item.Auto_Cones_Top.ToString();
+        LabelAutoConeMid.Text = item.Auto_Cones_Middle.ToString();
+        LabelAutoConeLow.Text = item.Auto_Cones_Bottom.ToString();
+        ButtonAutoMobility.BackgroundColor = item.Auto_Mobility ? Colors.Green : Colors.Gray;
+        ButtonAutoDocked.BackgroundColor = item.Auto_Docked ? Colors.Green : Colors.Gray;
+        ButtonAutoEngaged.BackgroundColor = item.Auto_Engaged ? Colors.Green : Colors.Gray;
+        LabelTeleCubeTop.Text = item.Tele_Cubes_Top.ToString();
+        LabelTeleCubeMid.Text = item.Tele_Cubes_Middle.ToString();
+        LabelTeleCubeLow.Text = item.Tele_Cubes_Bottom.ToString();
+        LabelTeleConeTop.Text = item.Tele_Cones_Top.ToString();
+        LabelTeleConeMid.Text = item.Tele_Cones_Middle.ToString();
+        LabelTeleConeLow.Text = item.Tele_Cones_Bottom.ToString();
+        ButtonEndgameParked.BackgroundColor = item.Endgame_Parked ? Colors.Green : Colors.Gray;
+        ButtonEndgameDocked.BackgroundColor = item.Endgame_Docked ? Colors.Green : Colors.Gray;
+        ButtonEndgameEngaged.BackgroundColor = item.Endgame_Engaged ? Colors.Green : Colors.Gray;
         Comments.Text = item.Comments;
         CommentPicker.SelectedIndex = -1;
     }
 
     private void StoreFields(TeamMatch item)
     {
-        item.ScoutName = ScoutName.Text;
-        // todo store all other fields
-        item.Comments = Comments.Text;
+        if (string.IsNullOrWhiteSpace(item.ScoutName))
+            item.ScoutName = ScoutName.Text;
+        // everything else handled by Clicked/Changed events
     }
 }

@@ -7,7 +7,7 @@ public partial class MainPage : ContentPage
 {
     private readonly LocalDatabase db = new();
 
-    private TeamMatch item = null;
+    private TeamMatch item = new();
 
     public MainPage()
     {
@@ -41,6 +41,7 @@ public partial class MainPage : ContentPage
                     TeamNumber = team,
                     MatchNumber = match,
                     ScoutName = ScoutName.Text,
+                    Comments = "",
                 };
             // show the values on the screen
             FillFields(item);
@@ -75,5 +76,166 @@ public partial class MainPage : ContentPage
             Comments.Text += " ";
         Comments.Text += CommentPicker.SelectedItem.ToString();
         CommentPicker.SelectedIndex = -1;
+    }
+
+    private void ButtonAutoCubeTopPlus_Clicked(object sender, EventArgs e)
+    {
+        item.Auto_Cubes_Top++;
+        LabelAutoCubeTop.Text = item.Auto_Cubes_Top.ToString();
+    }
+
+    private void ButtonAutoCubeMidPlus_Clicked(object sender, EventArgs e)
+    {
+        item.Auto_Cubes_Middle++;
+        LabelAutoCubeMid.Text = item.Auto_Cubes_Middle.ToString();
+    }
+
+    private void ButtonAutoCubeLowPlus_Clicked(object sender, EventArgs e)
+    {
+        item.Auto_Cubes_Bottom++;
+        LabelAutoCubeLow.Text = item.Auto_Cubes_Bottom.ToString();
+    }
+
+    private void ButtonAutoConeTopPlus_Clicked(object sender, EventArgs e)
+    {
+        item.Auto_Cones_Top++;
+        LabelAutoConeTop.Text = item.Auto_Cones_Top.ToString();
+    }
+
+    private void ButtonAutoConeMidPlus_Clicked(object sender, EventArgs e)
+    {
+        item.Auto_Cones_Middle++;
+        LabelAutoConeMid.Text = item.Auto_Cones_Middle.ToString();
+    }
+
+    private void ButtonAutoConeLowPlus_Clicked(object sender, EventArgs e)
+    {
+        item.Auto_Cones_Bottom++;
+        LabelAutoConeLow.Text = item.Auto_Cones_Bottom.ToString();
+    }
+
+    private void ButtonAutoMobility_Clicked(object sender, EventArgs e)
+    {
+        item.Auto_Mobility = !item.Auto_Mobility;
+        switch (item.Auto_Mobility)
+        {
+            case false:
+                ButtonAutoMobility.BackgroundColor = Colors.Gray;
+                break;
+            case true:
+                ButtonAutoMobility.BackgroundColor = Colors.Green;
+                break;
+        }
+    }
+
+    private void ButtonAutoDocked_Clicked(object sender, EventArgs e)
+    {
+        item.Auto_Docked = !item.Auto_Docked;
+        switch (item.Auto_Docked)
+        {
+            case false:
+                ButtonAutoDocked.BackgroundColor = Colors.Gray;
+                break;
+            case true:
+                ButtonAutoDocked.BackgroundColor = Colors.Green;
+                break;
+        }
+    }
+
+    private void ButtonAutoEngaged_Clicked(object sender, EventArgs e)
+    {
+        item.Auto_Engaged = !item.Auto_Engaged;
+        switch (item.Auto_Engaged)
+        {
+            case false:
+                ButtonAutoEngaged.BackgroundColor = Colors.Gray;
+                break;
+            case true:
+                ButtonAutoEngaged.BackgroundColor = Colors.Green;
+                break;
+        }
+    }
+
+    private void ButtonTeleCubeTopPlus_Clicked(object sender, EventArgs e)
+    {
+        item.Tele_Cubes_Top++;
+        LabelTeleCubeTop.Text = item.Tele_Cubes_Top.ToString();
+    }
+
+    private void ButtonTeleCubeMidPlus_Clicked(object sender, EventArgs e)
+    {
+        item.Tele_Cubes_Middle++;
+        LabelTeleCubeMid.Text = item.Tele_Cubes_Middle.ToString();
+    }
+
+    private void ButtonTeleCubeLowPlus_Clicked(object sender, EventArgs e)
+    {
+        item.Tele_Cubes_Bottom++;
+        LabelTeleCubeLow.Text = item.Tele_Cubes_Bottom.ToString();
+    }
+
+    private void ButtonTeleConeTopPlus_Clicked(object sender, EventArgs e)
+    {
+        item.Tele_Cones_Top++;
+        LabelTeleConeTop.Text = item.Tele_Cones_Top.ToString();
+    }
+
+    private void ButtonTeleConeMidPlus_Clicked(object sender, EventArgs e)
+    {
+        item.Tele_Cones_Middle++;
+        LabelTeleConeMid.Text = item.Tele_Cones_Middle.ToString();
+    }
+
+    private void ButtonTeleConeLowPlus_Clicked(object sender, EventArgs e)
+    {
+        item.Tele_Cones_Bottom++;
+        LabelTeleConeLow.Text = item.Tele_Cones_Bottom.ToString();
+    }
+
+    private void ButtonEndgameParked_Clicked(object sender, EventArgs e)
+    {
+        item.Endgame_Parked = !item.Endgame_Parked;
+        switch (item.Endgame_Parked)
+        {
+            case false:
+                ButtonEndgameParked.BackgroundColor = Colors.Gray;
+                break;
+            case true:
+                ButtonEndgameParked.BackgroundColor = Colors.Green;
+                break;
+        }
+    }
+
+    private void ButtonEndgameDocked_Clicked(object sender, EventArgs e)
+    {
+        item.Endgame_Docked = !item.Endgame_Docked;
+        switch (item.Endgame_Docked)
+        {
+            case false:
+                ButtonEndgameDocked.BackgroundColor = Colors.Gray;
+                break;
+            case true:
+                ButtonEndgameDocked.BackgroundColor = Colors.Green;
+                break;
+        }
+    }
+
+    private void ButtonEndgameEngaged_Clicked(object sender, EventArgs e)
+    {
+        item.Endgame_Engaged = !item.Endgame_Engaged;
+        switch (item.Endgame_Engaged)
+        {
+            case false:
+                ButtonEndgameEngaged.BackgroundColor = Colors.Gray;
+                break;
+            case true:
+                ButtonEndgameEngaged.BackgroundColor = Colors.Green;
+                break;
+        }
+    }
+
+    private void Comments_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        item.Comments = Comments?.Text ?? "";
     }
 }

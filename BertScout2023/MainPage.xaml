@@ -93,12 +93,15 @@
                                 />
 
                             <Label
+                                x:Name="LabelAutoCubeTop"
                                 Text="0"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
 
                             <Button
+                                x:Name="ButtonAutoCubeTopPlus"
+                                Clicked="ButtonAutoCubeTopPlus_Clicked"
                                 Text=" + "
                                 />
 
@@ -113,12 +116,15 @@
                                 />
 
                             <Label
+                                x:Name="LabelAutoCubeMid"
                                 Text="0"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
 
                             <Button
+                                x:Name="ButtonAutoCubeMidPlus"
+                                Clicked="ButtonAutoCubeMidPlus_Clicked"
                                 Text=" + "
                                 />
 
@@ -133,12 +139,15 @@
                                 />
 
                             <Label
+                                x:Name="LabelAutoCubeLow"
                                 Text="0"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
 
                             <Button
+                                x:Name="ButtonAutoCubeLowPlus"
+                                Clicked="ButtonAutoCubeLowPlus_Clicked"
                                 Text=" + "
                                 />
 
@@ -157,12 +166,15 @@
                                 />
 
                             <Label
+                                x:Name="LabelAutoConeTop"
                                 Text="0"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
 
                             <Button
+                                x:Name="ButtonAutoConeTopPlus"
+                                Clicked="ButtonAutoConeTopPlus_Clicked"
                                 Text=" + "
                                 />
 
@@ -177,12 +189,15 @@
                                 />
 
                             <Label
+                                x:Name="LabelAutoConeMid"
                                 Text="0"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
 
                             <Button
+                                x:Name="ButtonAutoConeMidPlus"
+                                Clicked="ButtonAutoConeMidPlus_Clicked"
                                 Text=" + "
                                 />
 
@@ -197,12 +212,15 @@
                                 />
 
                             <Label
+                                x:Name="LabelAutoConeLow"
                                 Text="0"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
 
                             <Button
+                                x:Name="ButtonAutoConeLowPlus"
+                                Clicked="ButtonAutoConeLowPlus_Clicked"
                                 Text=" + "
                                 />
 
@@ -218,6 +236,9 @@
                             HorizontalOptions="Start">
 
                             <Button
+                                x:Name="ButtonAutoMobility"
+                                Clicked="ButtonAutoMobility_Clicked"
+                                BackgroundColor="Grey"
                                 WidthRequest="120"
                                 Text="Mobility"
                                 />
@@ -228,6 +249,9 @@
                             HorizontalOptions="Start">
 
                             <Button
+                                x:Name="ButtonAutoDocked"
+                                Clicked="ButtonAutoDocked_Clicked"
+                                BackgroundColor="Grey"
                                 WidthRequest="120"
                                 Text="Docked"
                                 />
@@ -238,6 +262,9 @@
                             HorizontalOptions="Start">
 
                             <Button
+                                x:Name="ButtonAutoEngaged"
+                                Clicked="ButtonAutoEngaged_Clicked"
+                                BackgroundColor="Grey"
                                 WidthRequest="120"
                                 Text="Engaged"
                                 />
@@ -269,12 +296,15 @@
                                 />
 
                             <Label
+                                x:Name="LabelTeleCubeTop"
                                 Text="0"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
 
                             <Button
+                                x:Name="ButtonTeleCubeTopPlus"
+                                Clicked="ButtonTeleCubeTopPlus_Clicked"
                                 Text=" + "
                                 />
 
@@ -289,12 +319,15 @@
                                 />
 
                             <Label
+                                x:Name="LabelTeleCubeMid"
                                 Text="0"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
 
                             <Button
+                                x:Name="ButtonTeleCubeMidPlus"
+                                Clicked="ButtonTeleCubeMidPlus_Clicked"
                                 Text=" + "
                                 />
 
@@ -309,12 +342,15 @@
                                 />
 
                             <Label
+                                x:Name="LabelTeleCubeLow"
                                 Text="0"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
 
                             <Button
+                                x:Name="ButtonTeleCubeLowPlus"
+                                Clicked="ButtonTeleCubeLowPlus_Clicked"
                                 Text=" + "
                                 />
 
@@ -333,12 +369,15 @@
                                 />
 
                             <Label
+                                x:Name="LabelTeleConeTop"
                                 Text="0"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
 
                             <Button
+                                x:Name="ButtonTeleConeTopPlus"
+                                Clicked="ButtonTeleConeTopPlus_Clicked"
                                 Text=" + "
                                 />
 
@@ -353,12 +392,15 @@
                                 />
 
                             <Label
+                                x:Name="LabelTeleConeMid"
                                 Text="0"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
 
                             <Button
+                                x:Name="ButtonTeleConeMidPlus"
+                                Clicked="ButtonTeleConeMidPlus_Clicked"
                                 Text=" + "
                                 />
 
@@ -373,12 +415,15 @@
                                 />
 
                             <Label
+                                x:Name="LabelTeleConeLow"
                                 Text="0"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
 
                             <Button
+                                x:Name="ButtonTeleConeLowPlus"
+                                Clicked="ButtonTeleConeLowPlus_Clicked"
                                 Text=" + "
                                 />
 
@@ -405,19 +450,28 @@
                         >
 
                         <Button
-                                WidthRequest="120"
-                                Text="Parked"
-                                />
+                            x:Name="ButtonEndgameParked"
+                            Clicked="ButtonEndgameParked_Clicked"
+                            BackgroundColor="Grey"
+                            WidthRequest="120"
+                            Text="Parked"
+                            />
 
                         <Button
-                                WidthRequest="120"
-                                Text="Docked"
-                                />
+                            x:Name="ButtonEndgameDocked"
+                            Clicked="ButtonEndgameDocked_Clicked"
+                            BackgroundColor="Grey"
+                            WidthRequest="120"
+                            Text="Docked"
+                            />
 
                         <Button
-                                WidthRequest="120"
-                                Text="Engaged"
-                                />
+                            x:Name="ButtonEndgameEngaged"
+                            Clicked="ButtonEndgameEngaged_Clicked"
+                            BackgroundColor="Grey"
+                            WidthRequest="120"
+                            Text="Engaged"
+                            />
 
                     </HorizontalStackLayout>
 
@@ -446,6 +500,7 @@
 
                     <Editor
                         x:Name="Comments"
+                        TextChanged="Comments_TextChanged"
                         HorizontalOptions="FillAndExpand"
                         HorizontalTextAlignment="Start"
                         HeightRequest="150"

@@ -83,25 +83,28 @@
 
                     <VerticalStackLayout>
 
-                        <Label>Cubes</Label>
+                        <Label
+                            Margin="10,0,0,0"
+                            FontAttributes="Bold">Cubes</Label>
                         
                         <HorizontalStackLayout
                             HorizontalOptions="Start">
 
                             <Label
                                 Text="Top:"
-                                WidthRequest="110"
+                                WidthRequest="50"
                                 />
 
                             <Button
                                 x:Name="ButtonAutoCubeTopMinus"
                                 Clicked="ButtonAutoCubeTopMinus_Clicked"
-                                Text=" - "
+                                Text="-"
                             />
 
                             <Label
                                 x:Name="LabelAutoCubeTop"
                                 Text="0"
+                                FontAttributes="Bold"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
@@ -119,18 +122,19 @@
 
                             <Label
                                 Text="Mid:"
-                                WidthRequest="110"
+                                WidthRequest="50"
                                 />
 
                             <Button
                                 x:Name="ButtonAutoCubeMidMinus"
                                 Clicked="ButtonAutoCubeMidMinus_Clicked"
-                                Text=" - "
+                                Text="-"
                             />
 
                             <Label
                                 x:Name="LabelAutoCubeMid"
                                 Text="0"
+                                FontAttributes="Bold"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
@@ -148,18 +152,19 @@
 
                             <Label
                                 Text="Low:"
-                                WidthRequest="110"
+                                WidthRequest="50"
                                 />
 
                             <Button
                                 x:Name="ButtonAutoCubeLowMinus"
                                 Clicked="ButtonAutoCubeLowMinus_Clicked"
-                                Text=" - "
+                                Text="-"
                             />
 
                             <Label
                                 x:Name="LabelAutoCubeLow"
                                 Text="0"
+                                FontAttributes="Bold"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
@@ -176,25 +181,29 @@
 
                     <VerticalStackLayout>
 
-                        <Label>Cones</Label>
+                        <Label
+                            Margin="10,0,0,0"
+                            FontAttributes="Bold">Cones
+                        </Label>
                         
                         <HorizontalStackLayout
                             HorizontalOptions="Start">
 
                             <Label
                                 Text="Top:"
-                                WidthRequest="110"
+                                WidthRequest="50"
                                 />
 
                             <Button
                                 x:Name="ButtonAutoConeTopMinus"
                                 Clicked="ButtonAutoConeTopMinus_Clicked"
-                                Text=" - "
+                                Text="-"
                             />
 
                             <Label
                                 x:Name="LabelAutoConeTop"
                                 Text="0"
+                                FontAttributes="Bold"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
@@ -212,18 +221,19 @@
 
                             <Label
                                 Text="Mid:"
-                                WidthRequest="110"
+                                WidthRequest="50"
                                 />
 
                             <Button
                                 x:Name="ButtonAutoConeMidMinus"
                                 Clicked="ButtonAutoConeMidMinus_Clicked"
-                                Text=" - "
+                                Text="-"
                             />
 
                             <Label
                                 x:Name="LabelAutoConeMid"
                                 Text="0"
+                                FontAttributes="Bold"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
@@ -241,18 +251,19 @@
 
                             <Label
                                 Text="Low:"
-                                WidthRequest="110"
+                                WidthRequest="50"
                                 />
 
                             <Button
                                 x:Name="ButtonAutoConeLowMinus"
                                 Clicked="ButtonAutoConeLowMinus_Clicked"
-                                Text=" - "
+                                Text="-"
                             />
 
                             <Label
                                 x:Name="LabelAutoConeLow"
                                 Text="0"
+                                FontAttributes="Bold"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
@@ -279,6 +290,7 @@
                                 BackgroundColor="Grey"
                                 WidthRequest="120"
                                 Text="Mobility"
+                                Margin="10,32,0,0"
                                 />
 
                         </HorizontalStackLayout>
@@ -324,7 +336,9 @@
                 <HorizontalStackLayout>
 
                     <VerticalStackLayout>
-                        <Label>
+                        <Label
+                            Margin="10,0,0,0"
+                            FontAttributes="Bold">
                             Cubes
                         </Label>
                         <HorizontalStackLayout
@@ -332,18 +346,19 @@
 
                             <Label
                                 Text="Top:"
-                                WidthRequest="110"
+                                WidthRequest="50"
                                 />
 
                             <Button
                                 x:Name="ButtonTeleCubeTopMinus"
                                 Clicked="ButtonTeleCubeTopMinus_Clicked"
-                                Text=" - "
+                                Text="-"
                             />
 
                             <Label
                                 x:Name="LabelTeleCubeTop"
                                 Text="0"
+                                FontAttributes="Bold"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
@@ -361,18 +376,19 @@
 
                             <Label
                                 Text="Mid:"
-                                WidthRequest="110"
+                                WidthRequest="50"
                                 />
 
                             <Button
                                 x:Name="ButtonTeleCubeMidMinus"
                                 Clicked="ButtonTeleCubeMidMinus_Clicked"
-                                Text=" - "
+                                Text="-"
                             />
 
                             <Label
                                 x:Name="LabelTeleCubeMid"
                                 Text="0"
+                                FontAttributes="Bold"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
@@ -390,18 +406,19 @@
 
                             <Label
                                 Text="Low:"
-                                WidthRequest="110"
+                                WidthRequest="50"
                                 />
 
                             <Button
                                 x:Name="ButtonTeleCubeLowMinus"
                                 Clicked="ButtonTeleCubeLowMinus_Clicked"
-                                Text=" - "
+                                Text="-"
                             />
 
                             <Label
                                 x:Name="LabelTeleCubeLow"
                                 Text="0"
+                                FontAttributes="Bold"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
@@ -417,7 +434,9 @@
                     </VerticalStackLayout>
 
                     <VerticalStackLayout>
-                        <Label>
+                        <Label
+                            Margin="10,0,0,0"
+                            FontAttributes="Bold">
                             Cones
                         </Label>
                         <HorizontalStackLayout
@@ -425,18 +444,19 @@
 
                             <Label
                                 Text="Top:"
-                                WidthRequest="110"
+                                WidthRequest="50"
                                 />
 
                             <Button
                                 x:Name="ButtonTeleConeTopMinus"
                                 Clicked="ButtonTeleConeTopMinus_Clicked"
-                                Text=" - "
+                                Text="-"
                             />
 
                             <Label
                                 x:Name="LabelTeleConeTop"
                                 Text="0"
+                                FontAttributes="Bold"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
@@ -454,18 +474,19 @@
 
                             <Label
                                 Text="Mid:"
-                                WidthRequest="110"
+                                WidthRequest="50"
                                 />
 
                             <Button
                                 x:Name="ButtonTeleConeMidMinus"
                                 Clicked="ButtonTeleConeMidMinus_Clicked"
-                                Text=" - "
+                                Text="-"
                             />
 
                             <Label
                                 x:Name="LabelTeleConeMid"
                                 Text="0"
+                                FontAttributes="Bold"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />
@@ -483,18 +504,19 @@
 
                             <Label
                                 Text="Low:"
-                                WidthRequest="110"
+                                WidthRequest="50"
                                 />
 
                             <Button
                                 x:Name="ButtonTeleConeLowMinus"
                                 Clicked="ButtonTeleConeLowMinus_Clicked"
-                                Text=" - "
+                                Text="-"
                             />
 
                             <Label
                                 x:Name="LabelTeleConeLow"
                                 Text="0"
+                                FontAttributes="Bold"
                                 HorizontalTextAlignment="End"
                                 WidthRequest="30"
                                 />

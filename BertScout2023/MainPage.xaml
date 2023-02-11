@@ -335,6 +335,12 @@
                                 WidthRequest="110"
                                 />
 
+                            <Button
+                                x:Name="ButtonTeleCubeTopMinus"
+                                Clicked="ButtonTeleCubeTopMinus_Clicked"
+                                Text=" - "
+                            />
+
                             <Label
                                 x:Name="LabelTeleCubeTop"
                                 Text="0"
@@ -358,6 +364,12 @@
                                 WidthRequest="110"
                                 />
 
+                            <Button
+                                x:Name="ButtonTeleCubeMidMinus"
+                                Clicked="ButtonTeleCubeMidMinus_Clicked"
+                                Text=" - "
+                            />
+
                             <Label
                                 x:Name="LabelTeleCubeMid"
                                 Text="0"
@@ -380,6 +392,12 @@
                                 Text="Low:"
                                 WidthRequest="110"
                                 />
+
+                            <Button
+                                x:Name="ButtonTeleCubeLowMinus"
+                                Clicked="ButtonTeleCubeLowMinus_Clicked"
+                                Text=" - "
+                            />
 
                             <Label
                                 x:Name="LabelTeleCubeLow"
@@ -410,6 +428,12 @@
                                 WidthRequest="110"
                                 />
 
+                            <Button
+                                x:Name="ButtonTeleConeTopMinus"
+                                Clicked="ButtonTeleConeTopMinus_Clicked"
+                                Text=" - "
+                            />
+
                             <Label
                                 x:Name="LabelTeleConeTop"
                                 Text="0"
@@ -433,6 +457,12 @@
                                 WidthRequest="110"
                                 />
 
+                            <Button
+                                x:Name="ButtonTeleConeMidMinus"
+                                Clicked="ButtonTeleConeMidMinus_Clicked"
+                                Text=" - "
+                            />
+
                             <Label
                                 x:Name="LabelTeleConeMid"
                                 Text="0"
@@ -455,6 +485,12 @@
                                 Text="Low:"
                                 WidthRequest="110"
                                 />
+
+                            <Button
+                                x:Name="ButtonTeleConeLowMinus"
+                                Clicked="ButtonTeleConeLowMinus_Clicked"
+                                Text=" - "
+                            />
 
                             <Label
                                 x:Name="LabelTeleConeLow"

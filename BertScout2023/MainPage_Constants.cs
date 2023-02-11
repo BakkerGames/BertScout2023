@@ -25,5 +25,6 @@ public partial class MainPage
          "No pick up.",
          "Yellow card.",
          "Red card.",
+         "DON'T PICK!",
     };
 }

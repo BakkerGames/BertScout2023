@@ -83,13 +83,21 @@
 
                     <VerticalStackLayout>
 
+                        <Label>Cubes</Label>
+                        
                         <HorizontalStackLayout
                             HorizontalOptions="Start">
 
                             <Label
-                                Text="Cube Top:"
+                                Text="Top:"
                                 WidthRequest="110"
                                 />
+
+                            <Button
+                                x:Name="ButtonAutoCubeTopMinus"
+                                Clicked="ButtonAutoCubeTopMinus_Clicked"
+                                Text=" - "
+                            />
 
                             <Label
                                 x:Name="LabelAutoCubeTop"
@@ -110,9 +118,15 @@
                             HorizontalOptions="Start">
 
                             <Label
-                                Text="Cube Mid:"
+                                Text="Mid:"
                                 WidthRequest="110"
                                 />
+
+                            <Button
+                                x:Name="ButtonAutoCubeMidMinus"
+                                Clicked="ButtonAutoCubeMidMinus_Clicked"
+                                Text=" - "
+                            />
 
                             <Label
                                 x:Name="LabelAutoCubeMid"
@@ -133,9 +147,15 @@
                             HorizontalOptions="Start">
 
                             <Label
-                                Text="Cube Low:"
+                                Text="Low:"
                                 WidthRequest="110"
                                 />
+
+                            <Button
+                                x:Name="ButtonAutoCubeLowMinus"
+                                Clicked="ButtonAutoCubeLowMinus_Clicked"
+                                Text=" - "
+                            />
 
                             <Label
                                 x:Name="LabelAutoCubeLow"
@@ -156,13 +176,21 @@
 
                     <VerticalStackLayout>
 
+                        <Label>Cones</Label>
+                        
                         <HorizontalStackLayout
                             HorizontalOptions="Start">
 
                             <Label
-                                Text="Cone Top:"
+                                Text="Top:"
                                 WidthRequest="110"
                                 />
+
+                            <Button
+                                x:Name="ButtonAutoConeTopMinus"
+                                Clicked="ButtonAutoConeTopMinus_Clicked"
+                                Text=" - "
+                            />
 
                             <Label
                                 x:Name="LabelAutoConeTop"
@@ -183,9 +211,15 @@
                             HorizontalOptions="Start">
 
                             <Label
-                                Text="Cone Mid:"
+                                Text="Mid:"
                                 WidthRequest="110"
                                 />
+
+                            <Button
+                                x:Name="ButtonAutoConeMidMinus"
+                                Clicked="ButtonAutoConeMidMinus_Clicked"
+                                Text=" - "
+                            />
 
                             <Label
                                 x:Name="LabelAutoConeMid"
@@ -206,9 +240,15 @@
                             HorizontalOptions="Start">
 
                             <Label
-                                Text="Cone Low:"
+                                Text="Low:"
                                 WidthRequest="110"
                                 />
+
+                            <Button
+                                x:Name="ButtonAutoConeLowMinus"
+                                Clicked="ButtonAutoConeLowMinus_Clicked"
+                                Text=" - "
+                            />
 
                             <Label
                                 x:Name="LabelAutoConeLow"
@@ -230,7 +270,6 @@
                     <VerticalStackLayout
                         Margin="10,0,0,0"
                         >
-
                         <HorizontalStackLayout
                             HorizontalOptions="Start">
 
@@ -285,12 +324,14 @@
                 <HorizontalStackLayout>
 
                     <VerticalStackLayout>
-
+                        <Label>
+                            Cubes
+                        </Label>
                         <HorizontalStackLayout
                             HorizontalOptions="Start">
 
                             <Label
-                                Text="Cube Top:"
+                                Text="Top:"
                                 WidthRequest="110"
                                 />
 
@@ -313,7 +354,7 @@
                             HorizontalOptions="Start">
 
                             <Label
-                                Text="Cube Mid:"
+                                Text="Mid:"
                                 WidthRequest="110"
                                 />
 
@@ -336,7 +377,7 @@
                             HorizontalOptions="Start">
 
                             <Label
-                                Text="Cube Low:"
+                                Text="Low:"
                                 WidthRequest="110"
                                 />
 
@@ -358,12 +399,14 @@
                     </VerticalStackLayout>
 
                     <VerticalStackLayout>
-
+                        <Label>
+                            Cones
+                        </Label>
                         <HorizontalStackLayout
                             HorizontalOptions="Start">
 
                             <Label
-                                Text="Cone Top:"
+                                Text="Top:"
                                 WidthRequest="110"
                                 />
 
@@ -386,7 +429,7 @@
                             HorizontalOptions="Start">
 
                             <Label
-                                Text="Cone Mid:"
+                                Text="Mid:"
                                 WidthRequest="110"
                                 />
 
@@ -409,7 +452,7 @@
                             HorizontalOptions="Start">
 
                             <Label
-                                Text="Cone Low:"
+                                Text="Low:"
                                 WidthRequest="110"
                                 />
 

@@ -31,20 +31,20 @@ public class TeamMatch : BaseModel
     public bool Auto_Engaged { get; set; }
 
     public int Auto_Cubes_Top { get; set; }
-    public int Auto_Cubes_Middle { get; set; }
-    public int Auto_Cubes_Bottom { get; set; }
+    public int Auto_Cubes_Mid { get; set; }
+    public int Auto_Cubes_Low { get; set; }
     public int Auto_Cones_Top { get; set; }
-    public int Auto_Cones_Middle { get; set; }
-    public int Auto_Cones_Bottom { get; set; }
+    public int Auto_Cones_Mid { get; set; }
+    public int Auto_Cones_Low { get; set; }
 
     // teleop
 
     public int Tele_Cubes_Top { get; set; }
-    public int Tele_Cubes_Middle { get; set; }
-    public int Tele_Cubes_Bottom { get; set; }
+    public int Tele_Cubes_Mid { get; set; }
+    public int Tele_Cubes_Low { get; set; }
     public int Tele_Cones_Top { get; set; }
-    public int Tele_Cones_Middle { get; set; }
-    public int Tele_Cones_Bottom { get; set; }
+    public int Tele_Cones_Mid { get; set; }
+    public int Tele_Cones_Low { get; set; }
 
     // end game
 

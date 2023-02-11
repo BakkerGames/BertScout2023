@@ -57,20 +57,20 @@ public partial class MainPage
     private void FillFields(TeamMatch item)
     {
         LabelAutoCubeTop.Text = item.Auto_Cubes_Top.ToString();
-        LabelAutoCubeMid.Text = item.Auto_Cubes_Middle.ToString();
-        LabelAutoCubeLow.Text = item.Auto_Cubes_Bottom.ToString();
+        LabelAutoCubeMid.Text = item.Auto_Cubes_Mid.ToString();
+        LabelAutoCubeLow.Text = item.Auto_Cubes_Low.ToString();
         LabelAutoConeTop.Text = item.Auto_Cones_Top.ToString();
-        LabelAutoConeMid.Text = item.Auto_Cones_Middle.ToString();
-        LabelAutoConeLow.Text = item.Auto_Cones_Bottom.ToString();
+        LabelAutoConeMid.Text = item.Auto_Cones_Mid.ToString();
+        LabelAutoConeLow.Text = item.Auto_Cones_Low.ToString();
         ButtonAutoMobility.BackgroundColor = item.Auto_Mobility ? Colors.Green : Colors.Gray;
         ButtonAutoDocked.BackgroundColor = item.Auto_Docked ? Colors.Green : Colors.Gray;
         ButtonAutoEngaged.BackgroundColor = item.Auto_Engaged ? Colors.Green : Colors.Gray;
         LabelTeleCubeTop.Text = item.Tele_Cubes_Top.ToString();
-        LabelTeleCubeMid.Text = item.Tele_Cubes_Middle.ToString();
-        LabelTeleCubeLow.Text = item.Tele_Cubes_Bottom.ToString();
+        LabelTeleCubeMid.Text = item.Tele_Cubes_Mid.ToString();
+        LabelTeleCubeLow.Text = item.Tele_Cubes_Low.ToString();
         LabelTeleConeTop.Text = item.Tele_Cones_Top.ToString();
-        LabelTeleConeMid.Text = item.Tele_Cones_Middle.ToString();
-        LabelTeleConeLow.Text = item.Tele_Cones_Bottom.ToString();
+        LabelTeleConeMid.Text = item.Tele_Cones_Mid.ToString();
+        LabelTeleConeLow.Text = item.Tele_Cones_Low.ToString();
         ButtonEndgameParked.BackgroundColor = item.Endgame_Parked ? Colors.Green : Colors.Gray;
         ButtonEndgameDocked.BackgroundColor = item.Endgame_Docked ? Colors.Green : Colors.Gray;
         ButtonEndgameEngaged.BackgroundColor = item.Endgame_Engaged ? Colors.Green : Colors.Gray;

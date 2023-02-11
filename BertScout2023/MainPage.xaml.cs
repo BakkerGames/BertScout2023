@@ -37,12 +37,12 @@ public partial class MainPage : ContentPage
             item = await db.GetTeamMatchAsync(team, match);
             // if not found, create new record
             item ??= new()
-                {
-                    TeamNumber = team,
-                    MatchNumber = match,
-                    ScoutName = ScoutName.Text,
-                    Comments = "",
-                };
+            {
+                TeamNumber = team,
+                MatchNumber = match,
+                ScoutName = ScoutName.Text,
+                Comments = "",
+            };
             // show the values on the screen
             FillFields(item);
             // disable the top row while entering
@@ -86,14 +86,14 @@ public partial class MainPage : ContentPage
 
     private void ButtonAutoCubeMidPlus_Clicked(object sender, EventArgs e)
     {
-        item.Auto_Cubes_Middle++;
-        LabelAutoCubeMid.Text = item.Auto_Cubes_Middle.ToString();
+        item.Auto_Cubes_Mid++;
+        LabelAutoCubeMid.Text = item.Auto_Cubes_Mid.ToString();
     }
 
     private void ButtonAutoCubeLowPlus_Clicked(object sender, EventArgs e)
     {
-        item.Auto_Cubes_Bottom++;
-        LabelAutoCubeLow.Text = item.Auto_Cubes_Bottom.ToString();
+        item.Auto_Cubes_Low++;
+        LabelAutoCubeLow.Text = item.Auto_Cubes_Low.ToString();
     }
 
     private void ButtonAutoConeTopPlus_Clicked(object sender, EventArgs e)
@@ -104,14 +104,14 @@ public partial class MainPage : ContentPage
 
     private void ButtonAutoConeMidPlus_Clicked(object sender, EventArgs e)
     {
-        item.Auto_Cones_Middle++;
-        LabelAutoConeMid.Text = item.Auto_Cones_Middle.ToString();
+        item.Auto_Cones_Mid++;
+        LabelAutoConeMid.Text = item.Auto_Cones_Mid.ToString();
     }
 
     private void ButtonAutoConeLowPlus_Clicked(object sender, EventArgs e)
     {
-        item.Auto_Cones_Bottom++;
-        LabelAutoConeLow.Text = item.Auto_Cones_Bottom.ToString();
+        item.Auto_Cones_Low++;
+        LabelAutoConeLow.Text = item.Auto_Cones_Low.ToString();
     }
 
     private void ButtonAutoMobility_Clicked(object sender, EventArgs e)
@@ -164,14 +164,14 @@ public partial class MainPage : ContentPage
 
     private void ButtonTeleCubeMidPlus_Clicked(object sender, EventArgs e)
     {
-        item.Tele_Cubes_Middle++;
-        LabelTeleCubeMid.Text = item.Tele_Cubes_Middle.ToString();
+        item.Tele_Cubes_Mid++;
+        LabelTeleCubeMid.Text = item.Tele_Cubes_Mid.ToString();
     }
 
     private void ButtonTeleCubeLowPlus_Clicked(object sender, EventArgs e)
     {
-        item.Tele_Cubes_Bottom++;
-        LabelTeleCubeLow.Text = item.Tele_Cubes_Bottom.ToString();
+        item.Tele_Cubes_Low++;
+        LabelTeleCubeLow.Text = item.Tele_Cubes_Low.ToString();
     }
 
     private void ButtonTeleConeTopPlus_Clicked(object sender, EventArgs e)
@@ -182,14 +182,14 @@ public partial class MainPage : ContentPage
 
     private void ButtonTeleConeMidPlus_Clicked(object sender, EventArgs e)
     {
-        item.Tele_Cones_Middle++;
-        LabelTeleConeMid.Text = item.Tele_Cones_Middle.ToString();
+        item.Tele_Cones_Mid++;
+        LabelTeleConeMid.Text = item.Tele_Cones_Mid.ToString();
     }
 
     private void ButtonTeleConeLowPlus_Clicked(object sender, EventArgs e)
     {
-        item.Tele_Cones_Bottom++;
-        LabelTeleConeLow.Text = item.Tele_Cones_Bottom.ToString();
+        item.Tele_Cones_Low++;
+        LabelTeleConeLow.Text = item.Tele_Cones_Low.ToString();
     }
 
     private void ButtonEndgameParked_Clicked(object sender, EventArgs e)
@@ -237,5 +237,65 @@ public partial class MainPage : ContentPage
     private void Comments_TextChanged(object sender, TextChangedEventArgs e)
     {
         item.Comments = Comments?.Text ?? "";
+    }
+
+    private void ButtonAutoCubeTopMinus_Clicked(object sender, EventArgs e)
+    {
+        if
+            (item.Auto_Cubes_Top > 0)
+        {
+            item.Auto_Cubes_Top--;
+            LabelAutoCubeTop.Text = item.Auto_Cubes_Top.ToString();
+        }
+    }
+
+    private void ButtonAutoCubeMidMinus_Clicked(object sender, EventArgs e)
+    {
+        if
+            (item.Auto_Cubes_Mid > 0)
+        {
+            item.Auto_Cubes_Mid--;
+            LabelAutoCubeMid.Text = item.Auto_Cubes_Mid.ToString();
+        }
+    }
+
+    private void ButtonAutoCubeLowMinus_Clicked(object sender, EventArgs e)
+    {
+        if
+            (item.Auto_Cubes_Low > 0)
+        {
+            item.Auto_Cubes_Low--;
+            LabelAutoCubeLow.Text = item.Auto_Cubes_Low.ToString();
+        }
+    }
+
+    private void ButtonAutoConeTopMinus_Clicked(object sender, EventArgs e)
+    {
+        if
+            (item.Auto_Cones_Top > 0)
+        {
+            item.Auto_Cones_Top--;
+            LabelAutoConeTop.Text = item.Auto_Cones_Top.ToString();
+        }
+    }
+
+    private void ButtonAutoConeMidMinus_Clicked(object sender, EventArgs e)
+    {
+        if
+            (item.Auto_Cones_Mid > 0)
+        {
+            item.Auto_Cones_Mid--;
+            LabelAutoConeMid.Text = item.Auto_Cones_Mid.ToString();
+        }
+    }
+
+    private void ButtonAutoConeLowMinus_Clicked(object sender, EventArgs e)
+    {
+        if
+            (item.Auto_Cones_Low > 0)
+        {
+            item.Auto_Cones_Low--;
+            LabelAutoConeLow.Text = item.Auto_Cones_Low.ToString();
+        }
     }
 }

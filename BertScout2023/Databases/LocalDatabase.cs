@@ -5,7 +5,7 @@ namespace BertScout2023.Databases;
 
 public class LocalDatabase
 {
-    public string DatabaseDirPath { get; set; } = "";
+    public string DatabaseDirPath { get; set; } = null;
 
     private const string DatabaseFilename = "bertscout2023.db3";
 
@@ -21,7 +21,19 @@ public class LocalDatabase
 
     public LocalDatabase()
     {
-        DatabaseDirPath = FileSystem.AppDataDirectory;
+#if ANDROID
+        if (Directory.Exists("/sdcard/Documents"))
+        {
+            DatabaseDirPath = "/sdcard/Documents";
+        }
+#elif WINDOWS
+        if (!Directory.Exists("C:\\Temp"))
+        {
+            Directory.CreateDirectory("C:\\Temp");
+        }
+        DatabaseDirPath = "C:\\Temp";
+#endif
+        DatabaseDirPath ??= FileSystem.AppDataDirectory;
     }
 
     private async Task Init()

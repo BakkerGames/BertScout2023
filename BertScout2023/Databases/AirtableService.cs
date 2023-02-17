@@ -8,6 +8,8 @@ public class AirtableService
 {
     private const string AIRTABLE_BASE = "apppW4EmzeMC26IEO";
     private const string AIRTABLE_KEY = "keyIlZIGEOtUMLKSY";
+    private const string AIRTABLE_TOKEN = 
+        "patC2YWa3BNdqbAhx.15673841cdc935966671f48843cdb32987710fb3170e5a0576fbc42a5909ad95";
 
     public static async Task<int> AirtableSendRecords(List<TeamMatch> matches)
     {

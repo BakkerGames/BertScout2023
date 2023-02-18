@@ -106,7 +106,9 @@ public class LocalDatabase
         {
             item.Id = oldItem.Id;
             item.Uuid = oldItem.Uuid;
-            item.AirtableId = oldItem.AirtableId;
+            // AirtableId may be updated in item, don't overwrite
+            if (!string.IsNullOrWhiteSpace(oldItem.AirtableId))
+                item.AirtableId = oldItem.AirtableId;
             return await Database.UpdateAsync(item);
         }
         item.Uuid = Guid.NewGuid().ToString();

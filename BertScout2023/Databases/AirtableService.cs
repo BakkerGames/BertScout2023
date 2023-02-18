@@ -7,7 +7,7 @@ namespace BertScout2023.Databases;
 public class AirtableService
 {
     private const string AIRTABLE_BASE = "apppW4EmzeMC26IEO";
-    private const string AIRTABLE_KEY = "keyIlZIGEOtUMLKSY";
+    //private const string AIRTABLE_KEY = "keyIlZIGEOtUMLKSY";
     private const string AIRTABLE_TOKEN = 
         "patC2YWa3BNdqbAhx.15673841cdc935966671f48843cdb32987710fb3170e5a0576fbc42a5909ad95";
 
@@ -21,7 +21,7 @@ public class AirtableService
         Type myType = typeof(TeamMatch);
         myFieldInfo = myType.GetFields(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
 
-        using AirtableBase airtableBase = new(AIRTABLE_KEY, AIRTABLE_BASE);
+        using AirtableBase airtableBase = new(AIRTABLE_TOKEN, AIRTABLE_BASE);
 
         foreach (TeamMatch match in matches)
         {
@@ -44,7 +44,12 @@ public class AirtableService
                     if (name.ToLower() == "airtableid") continue;
                     if (name.ToLower() == "changed") continue;
                     if (name.ToLower() == "deleted") continue;
-                    fields.AddField(name, fi.GetValue(match));
+                    object value = fi.GetValue(match);
+                    if (value is bool) // change to integers
+                    {
+                        value = (bool)value ? 1 : 0;
+                    }
+                    fields.AddField(name, value);
                 }
                 newRecordList.Add(fields);
             }
@@ -62,7 +67,12 @@ public class AirtableService
                     if (name.ToLower() == "airtableid") continue;
                     if (name.ToLower() == "changed") continue;
                     if (name.ToLower() == "deleted") continue;
-                    idFields.AddField(name, fi.GetValue(match));
+                    object value = fi.GetValue(match);
+                    if (value is bool) // change to integers
+                    {
+                        value = (bool)value ? 1 : 0;
+                    }
+                    idFields.AddField(name, value);
                 }
                 updatedRecordList.Add(idFields);
             }

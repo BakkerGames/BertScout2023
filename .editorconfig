@@ -2,3 +2,6 @@
 
 # IDE0058: Expression value is never used
 dotnet_diagnostic.IDE0058.severity = none
+
+# IDE0038: Use pattern matching
+dotnet_diagnostic.IDE0038.severity = none

@@ -18,23 +18,25 @@ public partial class AirtablePage : ContentPage
         {
             AirtableResults.Text = "";
             List<TeamMatch> matches = await db.GetItemsAsync();
-            foreach (TeamMatch item in matches
-                .OrderBy(x => $"{x.MatchNumber,3}{x.MatchNumber,4}"))
-            {
-                if (AirtableResults.Text.Length > 0)
-                    AirtableResults.Text += "\r\n";
-                AirtableResults.Text += $"{item.MatchNumber,4} - {item.TeamNumber,4}";
-            }
             var count = await AirtableService.AirtableSendRecords(matches);
-            if (AirtableResults.Text.Length > 0)
-                AirtableResults.Text += "\r\n";
-            AirtableResults.Text += $"{count} record(s) sent to Airtable";
+            var showS = (count == 1) ? "" : "s";
+            AirtableUpdatedLabel.Text = $"{count} record{showS} sent to Airtable";
+            foreach (TeamMatch item in matches
+                  .OrderBy(x => $"{x.MatchNumber,3}{x.MatchNumber,4}"))
+            {
+                if (item.Changed)
+                {
+                    item.Changed = false;
+                    await db.SaveItemAsync(item);
+                    if (AirtableResults.Text.Length > 0)
+                        AirtableResults.Text += "\r\n";
+                    AirtableResults.Text += $"Match {item.MatchNumber,4} - Team {item.TeamNumber,4}";
+                }
+            }
         }
         catch (Exception ex)
         {
-            if (AirtableResults.Text.Length > 0)
-                AirtableResults.Text += "\r\n";
-            AirtableResults.Text += ex.Message;
+            AirtableResults.Text = ex.Message;
         }
     }
 

@@ -27,6 +27,12 @@
             Clicked="AirtableSend_Clicked"
             />
 
+        <Label 
+            x:Name="AirtableUpdatedLabel"
+            Text=""
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
         <ScrollView
             x:Name="ScrollResults"
             VerticalScrollBarVisibility="Always"

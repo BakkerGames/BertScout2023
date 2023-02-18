@@ -2,8 +2,8 @@
   "records": [{
       "fields": {
         "Uuid": "7825D635-9C79-4AA9-BD67-A8C60C084D57",
-        "Team": 133,
-        "Match": 3,
+        "TeamNumber": 133,
+        "MatchNumber": 3,
         "ScoutName": "Scott",
         "Auto_Cubes_Top": 3,
         "Auto_Cubes_Mid": 3,

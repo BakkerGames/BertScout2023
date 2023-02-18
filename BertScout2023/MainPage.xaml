@@ -8,68 +8,71 @@
     BackgroundColor="White"
     >
 
-    <ScrollView>
+    <StackLayout
+        VerticalOptions="Start"
+        >
 
-        <VerticalStackLayout
-            VerticalOptions="Start"
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
             >
 
-            <HorizontalStackLayout
-                HorizontalOptions="Center"
-                >
+            <Label
+                Text="Team:"
+                Margin="0,20,0,0"
+                />
 
-                <Label
-                    Text="Team:"
-                    Margin="0,20,0,0"
-                    />
+            <Entry
+                x:Name="TeamNumber"
+                WidthRequest="70"
+                Keyboard="Numeric"
+                MaxLength="4"
+                Margin="4,10,0,0"
+                Text=""
+                IsEnabled="true"
+                />
 
-                <Entry
-                    x:Name="TeamNumber"
-                    WidthRequest="70"
-                    Keyboard="Numeric"
-                    MaxLength="4"
-                    Margin="4,10,0,0"
-                    Text=""
-                    IsEnabled="true"
-                    />
+            <Label
+                Text="Match:"
+                Margin="20,20,0,0"
+                />
 
-                <Label
-                    Text="Match:"
-                    Margin="20,20,0,0"
-                    />
+            <Entry
+                x:Name="MatchNumber"
+                WidthRequest="60"
+                Keyboard="Numeric"
+                MaxLength="3"
+                Margin="4,10,0,0"
+                Text=""
+                IsEnabled="true"
+                />
 
-                <Entry
-                    x:Name="MatchNumber"
-                    WidthRequest="60"
-                    Keyboard="Numeric"
-                    MaxLength="3"
-                    Margin="4,10,0,0"
-                    Text=""
-                    IsEnabled="true"
-                    />
+            <Entry
+                x:Name="ScoutName"
+                Placeholder="name"
+                WidthRequest="160"
+                MaxLength="10"
+                Margin="30,10,0,0"
+                Text=""
+                IsEnabled="true"
+                />
 
-                <Entry
-                    x:Name="ScoutName"
-                    Placeholder="name"
-                    WidthRequest="160"
-                    MaxLength="10"
-                    Margin="30,10,0,0"
-                    Text=""
-                    IsEnabled="true"
-                    />
+            <Button
+                x:Name="Start"
+                Text="Start"
+                Clicked="Start_Clicked"
+                Margin="20,10,0,0"
+                />
 
-                <Button
-                    x:Name="Start"
-                    Text="Start"
-                    Clicked="Start_Clicked"
-                    Margin="20,10,0,0"
-                    />
+        </HorizontalStackLayout>
 
-            </HorizontalStackLayout>
+        <ScrollView
+            VerticalOptions="FillAndExpand"
+            >
 
             <VerticalStackLayout
                 x:Name="FormBody"
-                IsVisible="False">
+                IsVisible="False"
+                >
 
                 <Label
                     Text="Autonomous"
@@ -86,9 +89,10 @@
                         <Label
                             Margin="10,0,0,0"
                             FontAttributes="Bold">Cubes</Label>
-                        
+
                         <HorizontalStackLayout
-                            HorizontalOptions="Start">
+                            HorizontalOptions="Start"
+                            >
 
                             <Label
                                 Text="Top:"
@@ -98,8 +102,9 @@
                             <Button
                                 x:Name="ButtonAutoCubeTopMinus"
                                 Clicked="ButtonAutoCubeTopMinus_Clicked"
+                                BackgroundColor="LightSteelBlue"
                                 Text="-"
-                            />
+                                />
 
                             <Label
                                 x:Name="LabelAutoCubeTop"
@@ -118,7 +123,8 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout
-                            HorizontalOptions="Start">
+                            HorizontalOptions="Start"
+                            >
 
                             <Label
                                 Text="Mid:"
@@ -128,8 +134,9 @@
                             <Button
                                 x:Name="ButtonAutoCubeMidMinus"
                                 Clicked="ButtonAutoCubeMidMinus_Clicked"
+                                BackgroundColor="LightSteelBlue"
                                 Text="-"
-                            />
+                                />
 
                             <Label
                                 x:Name="LabelAutoCubeMid"
@@ -148,7 +155,8 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout
-                            HorizontalOptions="Start">
+                            HorizontalOptions="Start"
+                            >
 
                             <Label
                                 Text="Low:"
@@ -158,8 +166,9 @@
                             <Button
                                 x:Name="ButtonAutoCubeLowMinus"
                                 Clicked="ButtonAutoCubeLowMinus_Clicked"
+                                BackgroundColor="LightSteelBlue"
                                 Text="-"
-                            />
+                                />
 
                             <Label
                                 x:Name="LabelAutoCubeLow"
@@ -183,11 +192,13 @@
 
                         <Label
                             Margin="10,0,0,0"
-                            FontAttributes="Bold">Cones
+                            FontAttributes="Bold">
+                            Cones
                         </Label>
-                        
+
                         <HorizontalStackLayout
-                            HorizontalOptions="Start">
+                            HorizontalOptions="Start"
+                            >
 
                             <Label
                                 Text="Top:"
@@ -197,8 +208,9 @@
                             <Button
                                 x:Name="ButtonAutoConeTopMinus"
                                 Clicked="ButtonAutoConeTopMinus_Clicked"
+                                BackgroundColor="LightSteelBlue"
                                 Text="-"
-                            />
+                                />
 
                             <Label
                                 x:Name="LabelAutoConeTop"
@@ -217,7 +229,8 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout
-                            HorizontalOptions="Start">
+                            HorizontalOptions="Start"
+                            >
 
                             <Label
                                 Text="Mid:"
@@ -227,8 +240,9 @@
                             <Button
                                 x:Name="ButtonAutoConeMidMinus"
                                 Clicked="ButtonAutoConeMidMinus_Clicked"
+                                BackgroundColor="LightSteelBlue"
                                 Text="-"
-                            />
+                                />
 
                             <Label
                                 x:Name="LabelAutoConeMid"
@@ -247,7 +261,8 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout
-                            HorizontalOptions="Start">
+                            HorizontalOptions="Start"
+                            >
 
                             <Label
                                 Text="Low:"
@@ -257,8 +272,9 @@
                             <Button
                                 x:Name="ButtonAutoConeLowMinus"
                                 Clicked="ButtonAutoConeLowMinus_Clicked"
+                                BackgroundColor="LightSteelBlue"
                                 Text="-"
-                            />
+                                />
 
                             <Label
                                 x:Name="LabelAutoConeLow"
@@ -281,8 +297,10 @@
                     <VerticalStackLayout
                         Margin="10,0,0,0"
                         >
+
                         <HorizontalStackLayout
-                            HorizontalOptions="Start">
+                            HorizontalOptions="Start"
+                            >
 
                             <Button
                                 x:Name="ButtonAutoMobility"
@@ -296,7 +314,8 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout
-                            HorizontalOptions="Start">
+                            HorizontalOptions="Start"
+                            >
 
                             <Button
                                 x:Name="ButtonAutoDocked"
@@ -309,7 +328,8 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout
-                            HorizontalOptions="Start">
+                            HorizontalOptions="Start"
+                            >
 
                             <Button
                                 x:Name="ButtonAutoEngaged"
@@ -336,13 +356,16 @@
                 <HorizontalStackLayout>
 
                     <VerticalStackLayout>
+
                         <Label
                             Margin="10,0,0,0"
                             FontAttributes="Bold">
                             Cubes
                         </Label>
+
                         <HorizontalStackLayout
-                            HorizontalOptions="Start">
+                            HorizontalOptions="Start"
+                            >
 
                             <Label
                                 Text="Top:"
@@ -352,8 +375,9 @@
                             <Button
                                 x:Name="ButtonTeleCubeTopMinus"
                                 Clicked="ButtonTeleCubeTopMinus_Clicked"
+                                BackgroundColor="LightSteelBlue"
                                 Text="-"
-                            />
+                                />
 
                             <Label
                                 x:Name="LabelTeleCubeTop"
@@ -372,7 +396,8 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout
-                            HorizontalOptions="Start">
+                            HorizontalOptions="Start"
+                            >
 
                             <Label
                                 Text="Mid:"
@@ -382,8 +407,9 @@
                             <Button
                                 x:Name="ButtonTeleCubeMidMinus"
                                 Clicked="ButtonTeleCubeMidMinus_Clicked"
+                                BackgroundColor="LightSteelBlue"
                                 Text="-"
-                            />
+                                />
 
                             <Label
                                 x:Name="LabelTeleCubeMid"
@@ -402,7 +428,8 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout
-                            HorizontalOptions="Start">
+                            HorizontalOptions="Start"
+                            >
 
                             <Label
                                 Text="Low:"
@@ -412,8 +439,9 @@
                             <Button
                                 x:Name="ButtonTeleCubeLowMinus"
                                 Clicked="ButtonTeleCubeLowMinus_Clicked"
+                                BackgroundColor="LightSteelBlue"
                                 Text="-"
-                            />
+                                />
 
                             <Label
                                 x:Name="LabelTeleCubeLow"
@@ -434,13 +462,16 @@
                     </VerticalStackLayout>
 
                     <VerticalStackLayout>
+                        
                         <Label
                             Margin="10,0,0,0"
                             FontAttributes="Bold">
                             Cones
                         </Label>
+                        
                         <HorizontalStackLayout
-                            HorizontalOptions="Start">
+                            HorizontalOptions="Start"
+                            >
 
                             <Label
                                 Text="Top:"
@@ -450,8 +481,9 @@
                             <Button
                                 x:Name="ButtonTeleConeTopMinus"
                                 Clicked="ButtonTeleConeTopMinus_Clicked"
+                                BackgroundColor="LightSteelBlue"
                                 Text="-"
-                            />
+                                />
 
                             <Label
                                 x:Name="LabelTeleConeTop"
@@ -470,7 +502,8 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout
-                            HorizontalOptions="Start">
+                            HorizontalOptions="Start"
+                            >
 
                             <Label
                                 Text="Mid:"
@@ -480,8 +513,9 @@
                             <Button
                                 x:Name="ButtonTeleConeMidMinus"
                                 Clicked="ButtonTeleConeMidMinus_Clicked"
+                                BackgroundColor="LightSteelBlue"
                                 Text="-"
-                            />
+                                />
 
                             <Label
                                 x:Name="LabelTeleConeMid"
@@ -500,7 +534,8 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout
-                            HorizontalOptions="Start">
+                            HorizontalOptions="Start"
+                            >
 
                             <Label
                                 Text="Low:"
@@ -510,8 +545,9 @@
                             <Button
                                 x:Name="ButtonTeleConeLowMinus"
                                 Clicked="ButtonTeleConeLowMinus_Clicked"
+                                BackgroundColor="LightSteelBlue"
                                 Text="-"
-                            />
+                                />
 
                             <Label
                                 x:Name="LabelTeleConeLow"
@@ -607,12 +643,14 @@
                         Text=""
                         />
 
+
                 </VerticalStackLayout>
+
 
             </VerticalStackLayout>
 
-        </VerticalStackLayout>
+        </ScrollView>
 
-    </ScrollView>
+    </StackLayout>
 
 </ContentPage>

@@ -16,7 +16,11 @@ public partial class AirtablePage : ContentPage
     {
         try
         {
+            AirtableSend.IsEnabled = false;
+            AirtableUpdatedLabel.Text = "Sending, please wait...";
             AirtableResults.Text = "";
+            InvalidateMeasure();
+            Task task = DisplayAlert("Sending", "Sending data to Airtable - Please Wait", "OK");
             List<TeamMatch> matches = await db.GetItemsAsync();
             var count = await AirtableService.AirtableSendRecords(matches);
             var showS = (count == 1) ? "" : "s";
@@ -37,6 +41,10 @@ public partial class AirtablePage : ContentPage
         catch (Exception ex)
         {
             AirtableResults.Text = ex.Message;
+        }
+        finally
+        {
+            AirtableSend.IsEnabled = true;
         }
     }
 

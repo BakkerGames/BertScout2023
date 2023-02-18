@@ -14,7 +14,7 @@
         
         <Label
             x:Name="LabelAboutVersion"
-            Text="Version: 2023.2.11.2"
+            Text="Version: 2023.2.18.1"
             HorizontalOptions="Center"
             />
 

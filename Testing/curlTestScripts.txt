@@ -1,0 +1,12 @@
+[ListAllRecords]
+
+curl "https://api.airtable.com/v0/apppW4EmzeMC26IEO/TeamMatch" -H "Authorization: Bearer patC2YWa3BNdqbAhx.15673841cdc935966671f48843cdb32987710fb3170e5a0576fbc42a5909ad95"
+
+curl "https://api.airtable.com/v0/apppW4EmzeMC26IEO/TeamMatch" -H "Authorization: Bearer keyIlZIGEOtUMLKSY"
+
+
+[CreateRecords]
+
+curl -X POST "https://api.airtable.com/v0/apppW4EmzeMC26IEO/TeamMatch" -H "Authorization: Bearer patC2YWa3BNdqbAhx.15673841cdc935966671f48843cdb32987710fb3170e5a0576fbc42a5909ad95" -H "Content-Type: application/json" --data @addrecs.json
+
+curl -X POST "https://api.airtable.com/v0/apppW4EmzeMC26IEO/TeamMatch" -H "Authorization: Bearer keyIlZIGEOtUMLKSY" -H "Content-Type: application/json" --data @addrecs.json

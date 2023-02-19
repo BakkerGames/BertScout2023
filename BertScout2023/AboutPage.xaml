@@ -10,11 +10,11 @@
     >
     
     <VerticalStackLayout
-        VerticalOptions="Fill">
+        VerticalOptions="FillAndExpand">
         
         <Label
             x:Name="LabelAboutVersion"
-            Text="Version: 2023.2.19.0"
+            Text="Version: 2023.2.19.1"
             HorizontalOptions="Center"
             />
 
@@ -24,6 +24,11 @@
             HorizontalOptions="Center"
             />
 
+        <Label
+            HorizontalOptions="Center"
+            Text="Written by: Finn, Keith, Lucas, Zander, and Scott"
+            />
+        
     </VerticalStackLayout>
 
 </ContentPage>

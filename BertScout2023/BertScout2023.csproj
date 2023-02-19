@@ -78,7 +78,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiIcon Include="Resources\AppIcon\bert_logo_64.ico" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#FFFFFF" />
+	  <MauiIcon Include="Resources\AppIcon\bert_logo_64.ico" Color="#FFFFFF" />
 	</ItemGroup>
 
 	<ItemGroup>

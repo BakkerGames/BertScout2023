@@ -14,8 +14,10 @@
         SizeChanged="VerticalStackLayout_SizeChanged"
         >
 
-        <Label 
-            Text="List of matches"
+        <Button
+            x:Name="ShowMatchButton"
+            Text="Show Matches"
+            Clicked="ShowMatchButton_Clicked"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             />

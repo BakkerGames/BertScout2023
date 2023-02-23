@@ -33,10 +33,16 @@ public partial class MainPage : ContentPage
             // update screen fields without leading zeros
             TeamNumber.Text = team.ToString();
             MatchNumber.Text = match.ToString();
+            // delete the match
             if (ScoutName.Text == "DELETE")
             {
-                await db.DeleteTeamMatchAsync(team, match);
-                ClearAllFields();
+                bool answer = await DisplayAlert("Confirm", "Are you sure you want to delete this match?", "OK", "Cancel");
+                if (answer)
+                {
+                    await db.DeleteTeamMatchAsync(team, match);
+                }
+                TeamNumber.Text = "";
+                MatchNumber.Text = "";
                 ScoutName.Text = "";
                 // re-enable top row and focus on team number
                 EnableTopRow(true);

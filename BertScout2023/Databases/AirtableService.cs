@@ -25,10 +25,6 @@ public class AirtableService
 
         foreach (TeamMatch match in matches)
         {
-            if (match.Deleted)
-            {
-                continue;
-            }
             if (match.Uuid == null) continue;
             if (string.IsNullOrEmpty(match.AirtableId))
             {
@@ -53,7 +49,7 @@ public class AirtableService
                 }
                 newRecordList.Add(fields);
             }
-            else if (match.Changed && !match.Deleted)
+            else if (match.Changed)
             {
                 IdFields idFields = new(match.AirtableId);
                 foreach (FieldInfo fi in myFieldInfo)

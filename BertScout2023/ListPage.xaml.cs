@@ -10,7 +10,7 @@ public partial class ListPage : ContentPage
     public ListPage()
     {
         InitializeComponent();
-        ShowMatchesAsync();
+        ListResults.Text = "";
     }
 
     private async void ShowMatchesAsync()
@@ -29,5 +29,10 @@ public partial class ListPage : ContentPage
     private void VerticalStackLayout_SizeChanged(object sender, EventArgs e)
     {
         ScrollResults.HeightRequest = cpListMatches.Height - ScrollResults.Y;
+    }
+
+    private void ShowMatchButton_Clicked(object sender, EventArgs e)
+    {
+        ShowMatchesAsync();
     }
 }

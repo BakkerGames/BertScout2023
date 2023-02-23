@@ -58,6 +58,7 @@ public class LocalDatabase
     {
         await Init();
         return await Database.Table<TeamMatch>()
+            .Where(i => !i.Deleted)
             .ToListAsync();
     }
 
@@ -65,7 +66,8 @@ public class LocalDatabase
     {
         await Init();
         return await Database.Table<TeamMatch>()
-            .Where(x => x.Changed)
+            .Where(i => i.Changed)
+            .Where(i => !i.Deleted)
             .ToListAsync();
     }
 
@@ -74,6 +76,7 @@ public class LocalDatabase
         await Init();
         return await Database.Table<TeamMatch>()
             .Where(i => i.TeamNumber == team)
+            .Where(i => !i.Deleted)
             .OrderBy(i => i.MatchNumber)
             .ToListAsync();
     }
@@ -83,6 +86,7 @@ public class LocalDatabase
         await Init();
         return await Database.Table<TeamMatch>()
             .Where(i => i.TeamNumber == team && i.MatchNumber == match)
+            .Where(i => !i.Deleted)
             .FirstOrDefaultAsync();
     }
 
@@ -91,6 +95,7 @@ public class LocalDatabase
         await Init();
         return await Database.Table<TeamMatch>()
             .Where(i => i.Id == id)
+            .Where(i => !i.Deleted)
             .FirstOrDefaultAsync();
     }
 
@@ -118,9 +123,14 @@ public class LocalDatabase
     public async Task DeleteTeamMatchAsync(int team, int match)
     {
         await Init();
-        await Database.Table<TeamMatch>()
+        var item = await Database.Table<TeamMatch>()
             .Where(i => i.TeamNumber == team && i.MatchNumber == match)
-            .DeleteAsync();
+            .Where(i => !i.Deleted)
+            .FirstOrDefaultAsync();
+        if (item != null)
+        {
+            item.Deleted = true;
+            await Database.UpdateAsync(item);
+        }
     }
-
 }

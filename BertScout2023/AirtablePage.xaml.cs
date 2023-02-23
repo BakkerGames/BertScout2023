@@ -26,7 +26,7 @@ public partial class AirtablePage : ContentPage
             var showS = (count == 1) ? "" : "s";
             AirtableUpdatedLabel.Text = $"{count} record{showS} sent to Airtable";
             foreach (TeamMatch item in matches
-                  .OrderBy(x => $"{x.MatchNumber,3}{x.MatchNumber,4}"))
+                .OrderBy(x => $"{x.MatchNumber,3}{x.MatchNumber,4}"))
             {
                 if (item.Changed)
                 {

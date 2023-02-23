@@ -17,6 +17,13 @@
         />
 
     <ShellContent
+        Title="List Matches"
+        FlexLayout.AlignSelf="Center"
+        ContentTemplate="{DataTemplate local:ListPage}"
+        Route="ListPage"
+        />
+
+    <ShellContent
         Title="Airtable"
         FlexLayout.AlignSelf="Center"
         ContentTemplate="{DataTemplate local:AirtablePage}"

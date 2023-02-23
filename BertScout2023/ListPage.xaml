@@ -2,34 +2,20 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="BertScout2023.ListPage"
     x:DataType="ContentPage"
-    x:Name="cp"
-    x:Class="BertScout2023.AirtablePage"
-    Title="Airtable"
+    x:Name="cpListMatches"
+    Title="List Matches"
     BackgroundColor="White"
     >
-    
-    <VerticalStackLayout
+
+    <StackLayout
         VerticalOptions="Fill"
         SizeChanged="VerticalStackLayout_SizeChanged"
         >
-        
-        <Label 
-            x:Name="AirtableLabel"
-            Text="Send data to Airtable!" 
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        
-        <Button 
-            x:Name="AirtableSend"
-            Text="Send"
-            HorizontalOptions="Center"
-            Clicked="AirtableSend_Clicked"
-            />
 
         <Label 
-            x:Name="AirtableUpdatedLabel"
-            Text=""
+            Text="List of matches"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             />
@@ -40,14 +26,14 @@
             BackgroundColor="White">
 
             <Label
-                x:Name="AirtableResults" 
-                Text="" 
+                x:Name="ListResults"
+                Text=""
                 FontFamily="Consolas"
                 VerticalOptions="FillAndExpand"
                 />
 
         </ScrollView>
-       
-    </VerticalStackLayout>
+
+    </StackLayout>
 
 </ContentPage>

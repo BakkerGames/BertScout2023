@@ -114,4 +114,13 @@ public class LocalDatabase
         item.Uuid = Guid.NewGuid().ToString();
         return await Database.InsertAsync(item);
     }
+
+    public async Task DeleteTeamMatchAsync(int team, int match)
+    {
+        await Init();
+        await Database.Table<TeamMatch>()
+            .Where(i => i.TeamNumber == team && i.MatchNumber == match)
+            .DeleteAsync();
+    }
+
 }

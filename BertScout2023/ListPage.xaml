@@ -16,7 +16,7 @@
 
         <Button
             x:Name="ShowMatchButton"
-            Text="Show Matches"
+            Text="Refresh List"
             Clicked="ShowMatchButton_Clicked"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
